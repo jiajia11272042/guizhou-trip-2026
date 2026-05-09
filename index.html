@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>贵州 5 天 4 晚自由行攻略 · 5.29–6.3</title>
+<title>贵州自由行攻略 · 三套方案对比（高铁 / 自驾A / 自驾B）</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -28,49 +28,45 @@
     margin-bottom: 24px;
   }
   header h1 {
-    font-size: 32px;
+    font-size: 30px;
     color: #1a5d3f;
     margin-bottom: 10px;
     letter-spacing: 1px;
   }
   header .subtitle {
-    font-size: 16px;
+    font-size: 15px;
     color: #666;
   }
   header .meta {
     margin-top: 12px;
-    font-size: 14px;
+    font-size: 13px;
     color: #999;
   }
-  /* Tab navigation */
+  /* Tab 导航 */
   .tabs {
     display: flex;
     gap: 4px;
     border-bottom: 3px solid #2ea87e;
     margin-bottom: 28px;
     overflow-x: auto;
-    padding-bottom: 0;
     scrollbar-width: thin;
   }
   .tab-btn {
     flex-shrink: 0;
-    padding: 10px 18px;
+    padding: 10px 16px;
     background: #f0f4f1;
     border: 1px solid #e5e7eb;
     border-bottom: none;
     color: #567d5f;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     white-space: nowrap;
     border-radius: 8px 8px 0 0;
     transition: all 0.2s;
     font-family: inherit;
   }
-  .tab-btn:hover {
-    background: #dbf0e4;
-    color: #1a5d3f;
-  }
+  .tab-btn:hover { background: #dbf0e4; color: #1a5d3f; }
   .tab-btn.active {
     background: #2ea87e;
     color: #fff;
@@ -81,14 +77,11 @@
     display: none;
     animation: fadeIn 0.3s;
   }
-  .tab-content.active {
-    display: block;
-  }
+  .tab-content.active { display: block; }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(5px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  /* Sub navigation inside itinerary tab */
   .sub-nav {
     display: flex;
     gap: 8px;
@@ -108,10 +101,7 @@
     text-decoration: none;
     transition: all 0.2s;
   }
-  .sub-nav a:hover {
-    background: #2ea87e;
-    color: #fff;
-  }
+  .sub-nav a:hover { background: #2ea87e; color: #fff; }
   h2 {
     font-size: 22px;
     color: #1a5d3f;
@@ -124,6 +114,11 @@
     color: #2c3e50;
     margin: 22px 0 12px;
   }
+  h4 {
+    font-size: 15px;
+    color: #1a5d3f;
+    margin: 16px 0 8px;
+  }
   .day-card {
     background: #fafbfc;
     border: 1px solid #e5e7eb;
@@ -131,10 +126,8 @@
     padding: 22px 26px;
     margin-bottom: 20px;
   }
-  .day-card.highlight {
-    background: #fff9e6;
-    border-color: #f0c040;
-  }
+  .day-card.highlight { background: #fff9e6; border-color: #f0c040; }
+  .day-card.driving { background: #f0f7ff; border-color: #88baea; }
   .day-header {
     display: flex;
     justify-content: space-between;
@@ -142,12 +135,10 @@
     margin-bottom: 16px;
     padding-bottom: 12px;
     border-bottom: 1px dashed #d0d4d9;
+    flex-wrap: wrap;
+    gap: 8px;
   }
-  .day-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a5d3f;
-  }
+  .day-title { font-size: 18px; font-weight: 600; color: #1a5d3f; }
   .day-tag {
     background: #2ea87e;
     color: #fff;
@@ -157,9 +148,8 @@
   }
   .day-tag.warn { background: #e67e22; }
   .day-tag.info { background: #3498db; }
-  .timeline {
-    list-style: none;
-  }
+  .day-tag.danger { background: #e74c3c; }
+  .timeline { list-style: none; }
   .timeline li {
     position: relative;
     padding: 10px 0 10px 110px;
@@ -194,41 +184,10 @@
     text-align: left;
     vertical-align: top;
   }
-  th {
-    background: #1a5d3f;
-    color: #fff;
-    font-weight: 600;
-  }
+  th { background: #1a5d3f; color: #fff; font-weight: 600; }
   tr:nth-child(even) td { background: #fafbfc; }
   tr:hover td { background: #f0faf5; }
   .star { color: #e74c3c; font-weight: 600; }
-  .food-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin: 16px 0;
-  }
-  .food-card {
-    background: #fff8ee;
-    border: 1px solid #f5d89a;
-    border-radius: 8px;
-    padding: 16px;
-  }
-  .food-card h4 {
-    color: #b95f00;
-    font-size: 15px;
-    margin-bottom: 8px;
-  }
-  .food-card ul {
-    list-style: none;
-    font-size: 13px;
-  }
-  .food-card li {
-    padding: 4px 0;
-    border-bottom: 1px dashed #eadab0;
-  }
-  .food-card li:last-child { border-bottom: none; }
-  .food-card .must { color: #e74c3c; font-weight: 600; }
   .badge {
     display: inline-block;
     background: #2ea87e;
@@ -241,6 +200,43 @@
   .badge.red { background: #e74c3c; }
   .badge.orange { background: #e67e22; }
   .badge.blue { background: #3498db; }
+  .badge.gray { background: #7f8c8d; }
+  .tldr {
+    background: linear-gradient(135deg, #2ea87e 0%, #1a5d3f 100%);
+    color: #fff;
+    padding: 18px 24px;
+    border-radius: 10px;
+    margin: 16px 0 24px;
+    font-size: 15px;
+  }
+  .tldr.driving { background: linear-gradient(135deg, #5b9bd5 0%, #2c5d96 100%); }
+  .tldr strong { color: #fff; }
+  .tldr::before {
+    content: "💡 一句话总结";
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .food-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .food-card {
+    background: #fff8ee;
+    border: 1px solid #f5d89a;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .food-card h4 { color: #b95f00; font-size: 15px; margin-bottom: 8px; }
+  .food-card ul { list-style: none; font-size: 13px; }
+  .food-card li { padding: 4px 0; border-bottom: 1px dashed #eadab0; }
+  .food-card li:last-child { border-bottom: none; }
+  .food-card .must { color: #e74c3c; font-weight: 600; }
   .tips-box {
     background: #fff0f0;
     border-left: 4px solid #e74c3c;
@@ -266,11 +262,7 @@
     padding: 20px 24px;
     margin: 20px 0;
   }
-  .ticket-highlight h3 {
-    color: #b95f00;
-    margin-top: 0;
-    margin-bottom: 14px;
-  }
+  .ticket-highlight h3 { color: #b95f00; margin-top: 0; margin-bottom: 14px; }
   .checklist {
     background: #f0faf5;
     padding: 18px 24px;
@@ -287,6 +279,30 @@
     font-weight: 700;
     margin-right: 6px;
   }
+  .compare-card {
+    background: #fafbfc;
+    border: 2px solid #2ea87e;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .compare-card h3 { color: #1a5d3f; margin-top: 0; }
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 14px 0;
+  }
+  .pros, .cons {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+  .pros { background: #e8f7ee; border-left: 4px solid #27ae60; }
+  .cons { background: #fdecea; border-left: 4px solid #e74c3c; }
+  .pros h4 { color: #27ae60; margin-bottom: 6px; }
+  .cons h4 { color: #c0392b; margin-bottom: 6px; }
+  .pros ul, .cons ul { padding-left: 18px; }
   footer {
     margin-top: 40px;
     padding-top: 20px;
@@ -305,10 +321,10 @@
   }
   @media (max-width: 768px) {
     .container { padding: 20px; }
-    .food-grid { grid-template-columns: 1fr; }
+    .food-grid, .pros-cons { grid-template-columns: 1fr; }
     .timeline li { padding-left: 0; padding-top: 28px; }
     .timeline .time { position: static; display: block; margin-bottom: 4px; }
-    .tab-btn { padding: 8px 14px; font-size: 13px; }
+    .tab-btn { padding: 8px 12px; font-size: 12px; }
   }
 </style>
 </head>
@@ -316,774 +332,742 @@
 <div class="container">
 
 <header>
-  <h1>贵州 5 天 4 晚自由行攻略</h1>
-  <div class="subtitle">北京 + 西安双城出发 · 黄果树瀑布 + 荔波小七孔 + 贵阳市区深度游</div>
-  <div class="meta">2026 年 5 月 29 日(周五）— 6 月 3 日（周三） · 2 人（一人从北京、一人从西安） · 以自然风光与美食为主</div>
+  <h1>贵州自由行攻略</h1>
+  <div class="subtitle">3 套方案对比 · 高铁版 / 自驾A（先小后黄）/ 自驾B（先黄后小）</div>
+  <div class="meta">5 月底 6 月初 · 北京 + 西安 双城出发 · 2 人 · 自然风光 + 美食</div>
 </header>
 
 <!-- ====== TAB NAVIGATION ====== -->
-<div class="tabs" id="tab-nav">
+<div class="tabs">
   <button class="tab-btn active" data-tab="prep">📋 出发前必做</button>
-  <button class="tab-btn" data-tab="overview">📅 行程总览</button>
-  <button class="tab-btn" data-tab="itinerary">🗺 每日行程</button>
-  <button class="tab-btn" data-tab="ticket">🎫 景区门票</button>
-  <button class="tab-btn" data-tab="train">🚄 高铁班次</button>
+  <button class="tab-btn" data-tab="compare">⚖️ 三方案对比</button>
+  <button class="tab-btn" data-tab="hsr">🚄 方案1·高铁</button>
+  <button class="tab-btn" data-tab="drvA">🚗 方案2·自驾A</button>
+  <button class="tab-btn" data-tab="drvB">🚗 方案3·自驾B</button>
+  <button class="tab-btn" data-tab="ticket">🎫 门票</button>
   <button class="tab-btn" data-tab="hotel">🏨 住宿</button>
-  <button class="tab-btn" data-tab="food">🍜 吃喝大全</button>
+  <button class="tab-btn" data-tab="food">🍜 吃喝</button>
   <button class="tab-btn" data-tab="checklist">📝 行前&避坑</button>
 </div>
 
-<!-- ====== TAB 1: 出发前必做 ====== -->
+<!-- ========== TAB · 出发前必做 ========== -->
 <div class="tab-content active" id="tab-prep">
   <h2>① 出发前必做（按时间从早到晚）</h2>
-  <p style="color:#666; font-size:14px; margin-bottom:16px;">这一章把所有需要提前下单 / 抢票 / 预约的事整合在一起。红色行为硬截止时间，务必准点操作。</p>
+  <p style="color:#666; font-size:14px; margin-bottom:16px;">所有需要提前下单 / 抢票 / 预约的事整合在这。<strong class="star">红色行</strong>是硬截止时间，务必准点操作。如果选了不同方案，相应的高铁票/租车不同，看下面备注。</p>
   <table>
     <thead>
       <tr>
         <th style="width:140px">截止时间</th>
         <th>要做的事</th>
-        <th style="width:180px">平台</th>
-        <th style="width:200px">备注</th>
+        <th style="width:170px">平台</th>
+        <th style="width:180px">备注</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>本周内</td>
-        <td>订机票 <strong>A</strong>：北京→贵阳 5.29 晚班 / 贵阳→北京 6.3 16:00 左右</td>
+        <td>订机票 <strong>A</strong>：北京→贵阳 5.29 晚班 / 贵阳→北京（高铁版 6.3 16:00 / 自驾版 6.2 19-20 点）</td>
         <td>航司官网 / 飞猪 / 携程</td>
-        <td>关键词 <strong>PEK-KWE / KWE-PEK</strong>；越早越便宜</td>
+        <td>关键词 PEK-KWE / KWE-PEK</td>
       </tr>
       <tr>
         <td>本周内</td>
-        <td>订机票 <strong>B</strong>：西安→贵阳 5.29 晚班 / 贵阳→西安 6.3 16:00 左右</td>
+        <td>订机票 <strong>B</strong>：西安→贵阳 5.29 晚班 / 贵阳→西安（高铁版 6.3 / 自驾版 6.2）</td>
         <td>航司官网 / 飞猪 / 携程</td>
-        <td>关键词 <strong>XIY-KWE / KWE-XIY</strong>；去程尽量和北京航班同时到达 00:20 前后</td>
+        <td>关键词 XIY-KWE / KWE-XIY；和 A 同时到达</td>
+      </tr>
+      <tr style="background:#f0f7ff !important;">
+        <td>本周内（自驾）</td>
+        <td><strong>订租车</strong>：贵阳龙洞堡机场取车 / 贵阳市区还车（异地还车）</td>
+        <td>神州 / 一嗨 / 携程</td>
+        <td>SUV 全险约 350-400 元/天；自驾 A 租 3 天，自驾 B 租 4 天</td>
       </tr>
       <tr>
         <td>本周内</td>
-        <td>订贵阳北站附近酒店 <strong>3 晚</strong>（5.29–5.31，含 5.30 凌晨到店）</td>
+        <td>订住宿（高铁版）：贵阳北 3 晚 + 甲秀楼 2 晚</td>
         <td>携程 / 美团</td>
-        <td>选 "贵阳北站" 步行 10 分钟内</td>
-      </tr>
-      <tr>
-        <td>本周内</td>
-        <td>订贵阳市区甲秀楼酒店 <strong>2 晚</strong>（6.1–6.2）</td>
-        <td>携程 / 美团</td>
-        <td>推荐亚朵贵阳甲秀楼店</td>
+        <td>仅高铁版需要；自驾版住宿不同，见各方案 tab</td>
       </tr>
       <tr style="background:#fff0f0 !important;">
         <td><strong class="star">5.15 早 7:00 ⭐</strong></td>
-        <td>抢 5.30 高铁票：<br>① 去程 <strong>G2871 贵阳北 09:51→10:20 安顺西</strong>（睡饱再走）<br>② 回程 <strong>G5396 安顺西 21:39→22:10 贵阳北</strong>（末班）</td>
+        <td>抢 5.30 高铁票（仅高铁版）：<br>① 去 <strong>G2871 贵阳北 09:51→10:20 安顺西</strong><br>② 回 <strong>G5396 安顺西 21:39→22:10 贵阳北</strong>（末班）</td>
         <td>12306 App</td>
-        <td>实名制，带身份证；两段都抢</td>
+        <td>实名制，带身份证；自驾版可跳过</td>
       </tr>
       <tr style="background:#fff0f0 !important;">
         <td><strong class="star">5.16 早 7:00 ⭐</strong></td>
-        <td>抢 5.31 高铁票：<br>① 去程 <strong>D7511 贵阳北 09:00→10:24 荔波</strong>（睡饱再走）<br>② 回程 <strong>G8524 荔波 21:02→22:16 贵阳北</strong>（末班）</td>
+        <td>抢 5.31 高铁票（仅高铁版）：<br>① 去 <strong>D7511 贵阳北 09:00→10:24 荔波</strong><br>② 回 <strong>G8524 荔波 21:02→22:16 贵阳北</strong>（末班）</td>
         <td>12306 App</td>
-        <td>贵南高铁班次少，务必早抢</td>
+        <td>贵南高铁班次少，务必早抢；自驾版可跳过</td>
       </tr>
       <tr style="background:#fff7e0 !important;">
         <td>5.23–5.28</td>
-        <td>预约黄果树门票（5.30 用）<strong>210 元/人</strong>（含观光车 50）</td>
-        <td>微信公众号<br>「黄果树旅游」</td>
-        <td>选 <strong>10:00–11:00</strong> 入园（匹配 G2871 到达后的时间）</td>
+        <td>预约黄果树门票 <strong>210 元/人</strong>（含观光车 50）</td>
+        <td>微信公众号「黄果树旅游」</td>
+        <td>选好对应日期 + 入园时间段</td>
       </tr>
       <tr style="background:#fff7e0 !important;">
         <td>5.25–5.28</td>
-        <td>预约小七孔门票（5.31 用）<strong>150 元/人</strong>（含观光车 40）</td>
-        <td>微信公众号<br>「荔波小七孔景区」</td>
-        <td>选 <strong>10:30–11:30</strong> 入园（匹配 D7511 到达后的时间）</td>
+        <td>预约小七孔门票 <strong>150 元/人</strong>（含观光车 40）</td>
+        <td>微信公众号「荔波小七孔景区」</td>
+        <td>旺季周末易约满</td>
       </tr>
       <tr>
-        <td>5.28（可选）</td>
-        <td>订景区直通车：安顺西↔黄果树、荔波↔小七孔</td>
+        <td>5.28（高铁版）</td>
+        <td>订景区直通车（仅高铁版）</td>
         <td>各景区公众号</td>
-        <td>不订也能门口拼车，但直通车更省心</td>
+        <td>自驾版用不上</td>
       </tr>
       <tr>
         <td>5.29 出发前</td>
-        <td>截图保存所有预约码、机票、高铁票、酒店订单到手机相册</td>
+        <td>截图保存所有预约码、机票、高铁票/租车单、酒店订单到手机相册</td>
         <td>—</td>
         <td>防无网可查</td>
       </tr>
     </tbody>
   </table>
-  <div class="tips-box">
-    <h4>⚠️ 硬截止时间说明</h4>
-    <ul>
-      <li><strong>5.15 早 7:00</strong>：12306 提前 15 天开售，5.30 的票在 5.15 7:00 开抢</li>
-      <li><strong>5.16 早 7:00</strong>：5.31 的票在 5.16 7:00 开抢</li>
-      <li>机票酒店则是越早越便宜，建议本周内搞定</li>
-      <li>景区门票一般提前 7 天内开放预约，硬截止在出发前 1 天（5.28）</li>
-    </ul>
-  </div>
 </div>
 
-<!-- ====== TAB 2: 行程总览 ====== -->
-<div class="tab-content" id="tab-overview">
-  <h2>② 行程总览</h2>
+<!-- ========== TAB · 三方案对比 ========== -->
+<div class="tab-content" id="tab-compare">
+  <h2>② 三方案对比 · 选哪个看这页</h2>
+
   <table>
     <thead>
       <tr>
-        <th style="width:90px">日期</th>
-        <th style="width:80px">星期</th>
-        <th>主行程</th>
-        <th style="width:200px">住宿</th>
-        <th style="width:100px">核心交通</th>
+        <th></th>
+        <th>🚄 方案1·高铁</th>
+        <th>🚗 方案2·自驾A<br>(先小后黄)</th>
+        <th>🚗 方案3·自驾B<br>(先黄后小)</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>5.29</td><td>周五</td><td>北京首都 / 西安咸阳 晚班机分别飞贵阳（约同时到达）</td><td rowspan="3" style="text-align:center; background:#eafaf3 !important;">贵阳北站附近酒店<br>（连住 3 晚）<br><span style="font-size:12px; color:#666;">订 5.29 入住<br>5.30 凌晨到店</span></td><td>飞机</td></tr>
-      <tr><td>5.30</td><td>周六</td><td>凌晨到贵阳 → 高铁往返安顺西 → 黄果树瀑布一日游</td><td>打车+高铁</td></tr>
-      <tr><td>5.31</td><td>周日</td><td>高铁往返荔波 → 小七孔一日游 → 当晚回贵阳</td><td>高铁</td></tr>
-      <tr><td>6.1</td><td>周一</td><td>退房换酒店到市区 → 甲秀楼 → 黔灵山 → 二七路夜市</td><td rowspan="2" style="text-align:center; background:#eafaf3 !important;">贵阳甲秀楼酒店<br>（连住 2 晚）</td><td>地铁+步行</td></tr>
-      <tr><td>6.2</td><td>周二</td><td>慢时光放松日：文昌阁/观山湖/咖啡馆 → 花果园 → 青云路夜市</td><td>步行+打车</td></tr>
-      <tr><td>6.3</td><td>周三</td><td>上午自由活动 → 14:00 去机场 → 16:00 航班回北京/西安</td><td>—（返程）</td><td>打车</td></tr>
+      <tr><td><strong>总天数</strong></td><td>5天5晚<br>(5.29–6.3)</td><td>5天4晚<br>(5.29–6.2)</td><td>5天4晚<br>(5.29–6.2)</td></tr>
+      <tr><td>返程时间</td><td>6.3 下午 16:00 飞</td><td>6.2 晚 19-20 点飞</td><td>6.2 晚 19-20 点飞</td></tr>
+      <tr><td>总里程（陆路）</td><td>约 800 km 高铁</td><td>约 780 km 自驾</td><td>约 780 km 自驾</td></tr>
+      <tr><td>第一晚 5.29</td><td>住贵阳北附近</td><td>开 200km 到都匀</td><td>开 150km 到黄果树</td></tr>
+      <tr><td>D2 5.30 玩什么</td><td>高铁去黄果树往返</td><td>都匀→小七孔→开车去黄果树</td><td>整天玩黄果树（不挪窝）</td></tr>
+      <tr><td>D3 5.31 玩什么</td><td>高铁去小七孔往返</td><td>玩黄果树→开回贵阳还车</td><td>开 5h 去小七孔玩半天</td></tr>
+      <tr><td>D4 6.1</td><td>贵阳市区</td><td>贵阳市区整天</td><td>开 4h 回贵阳→下午晚上市区</td></tr>
+      <tr><td>D5 6.2</td><td>贵阳慢时光</td><td>市区半天→16:00 去机场</td><td>市区半天→16:00 去机场</td></tr>
+      <tr><td>D6 6.3</td><td>上午市区→14:00 去机场</td><td>—</td><td>—</td></tr>
+      <tr><td><strong>贵阳市区时间</strong></td><td>2.5 天</td><td>1.5 天</td><td>0.7 天</td></tr>
+      <tr><td><strong>夜路风险</strong></td><td>无</td><td>D1 开 200km 中等<br>D2 开 350km 较累</td><td>D1 开 150km 短<br>D2 没有<br>D3 白天开 5h ✅</td></tr>
+      <tr><td><strong>行李便利</strong></td><td>每天搬</td><td>留车上 ✅</td><td>留车上 ✅</td></tr>
+      <tr><td><strong>2 人总预算</strong></td><td>¥ 7,400–10,800</td><td>¥ 8,500–11,500</td><td>¥ 9,200–12,200</td></tr>
     </tbody>
   </table>
 
-  <h3>🎯 方案说明：为什么全程住贵阳</h3>
+  <h3>🎯 怎么选</h3>
   <div class="info-box">
-    <h4>核心优化：不在安顺西住，回贵阳住</h4>
-    <p>原方案 5.30 晚住安顺西高铁站附近，相当于背着行李在贵州转圈。优化后 5.29–5.31 连住贵阳北 3 晚，6.1 才换市区，原因如下：</p>
     <ul>
-      <li><strong>每天通勤仅多 22 分钟高铁</strong>：贵阳北 ↔ 安顺西只要 22 分钟，黄果树回程时多坐一班车的时间，换来不搬行李</li>
-      <li><strong>安顺西周边酒店条件差、吃没特色</strong>：对比贵阳北站附近连锁酒店，性价比悬殊</li>
-      <li><strong>5.30 晚上可以回贵阳吃一顿好的</strong>：二七路就在贵阳北打车 15 分钟</li>
-      <li><strong>大行李一次性安放</strong>：5.30 和 5.31 去景点时只带当天必需品即可</li>
+      <li><strong>怕开车 / 想省心 / 重视贵阳吃喝</strong> → <strong>方案 1 · 高铁</strong></li>
+      <li><strong>能开夜路 / 想保留贵阳市区 1.5 天 / 接近原意</strong> → <strong>方案 2 · 自驾 A</strong></li>
+      <li><strong>体力均衡为先 / 不熬夜 / 不在乎贵阳少玩</strong> → <strong>方案 3 · 自驾 B</strong></li>
     </ul>
   </div>
+
+  <h3>💰 费用结构对比（2 人总价，不含机票）</h3>
+  <table>
+    <thead>
+      <tr><th>项目</th><th>方案1·高铁</th><th>方案2·自驾A</th><th>方案3·自驾B</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>陆路交通</td><td>高铁 ~1,100<br>直通车 ~200</td><td>租车 3 天 1,050-1,200<br>异地还车 0-200</td><td>租车 4 天 1,400-1,600<br>异地还车 0-200</td></tr>
+      <tr><td>油费</td><td>—</td><td>~550</td><td>~550</td></tr>
+      <tr><td>过路费</td><td>—</td><td>~500</td><td>~500</td></tr>
+      <tr><td>停车费</td><td>—</td><td>100-200</td><td>100-200</td></tr>
+      <tr><td>市区打车</td><td>200-300</td><td>100-200</td><td>50-100</td></tr>
+      <tr><td>住宿</td><td>5 晚 1,650-2,650</td><td>4 晚 1,200-2,000</td><td>4 晚 1,300-2,100</td></tr>
+      <tr><td>餐饮</td><td>5.5 天 2,000-3,000</td><td>5 天 1,500-2,500</td><td>5 天 1,500-2,500</td></tr>
+      <tr><td>门票</td><td>720</td><td>720</td><td>720</td></tr>
+      <tr><td>杂项</td><td>200-400</td><td>200-400</td><td>200-400</td></tr>
+      <tr style="background:#fff9e6 !important;">
+        <td><strong>合计（2 人）</strong></td>
+        <td><strong>5,870–8,170</strong></td>
+        <td><strong>5,920–8,470</strong></td>
+        <td><strong>6,320–8,870</strong></td>
+      </tr>
+      <tr style="background:#fff9e6 !important;">
+        <td>+ 机票（2 人）</td>
+        <td>+1,500-2,500</td>
+        <td>+1,500-2,500</td>
+        <td>+1,500-2,500</td>
+      </tr>
+      <tr style="background:#fff9e6 !important;">
+        <td><strong>含机票总价</strong></td>
+        <td><strong>7,370–10,670</strong></td>
+        <td><strong>7,420–10,970</strong></td>
+        <td><strong>7,820–11,370</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; color:#666; margin-top:8px;">💡 三套方案总价相差不大，主要差在<strong>体验和体力分配</strong>，不在钱。</p>
 </div>
 
-<!-- ====== TAB 3: 每日行程 ====== -->
-<div class="tab-content" id="tab-itinerary">
-  <h2>③ 每日行程</h2>
-  <div class="sub-nav">
-    <a href="#day0">🛫 Day 0 · 5.29</a>
-    <a href="#day1">💧 Day 1 · 5.30 黄果树</a>
-    <a href="#day2">🌊 Day 2 · 5.31 小七孔</a>
-    <a href="#day3">🏙 Day 3 · 6.1 贵阳市区</a>
-    <a href="#day4">🍵 Day 4 · 6.2 慢时光</a>
-    <a href="#day5">✈️ Day 5 · 6.3 返程</a>
+<!-- ========== TAB · 方案1 高铁 ========== -->
+<div class="tab-content" id="tab-hsr">
+  <h2>🚄 方案 1 · 高铁版（5 天 5 晚 · 5.29–6.3）</h2>
+  <div class="tldr">
+    高铁两段日游 + 贵阳市区 2.5 天，<strong>最省心</strong>，全程不开车，行李在贵阳北放好不动。每天回贵阳吃晚饭，吃喝时间最充足。
   </div>
 
-  <div class="day-card" id="day0">
+  <div class="sub-nav">
+    <a href="#hsr-d0">🛫 D1 5.29 抵达</a>
+    <a href="#hsr-d1">💧 D2 5.30 黄果树</a>
+    <a href="#hsr-d2">🌊 D3 5.31 小七孔</a>
+    <a href="#hsr-d3">🏙 D4 6.1 市区</a>
+    <a href="#hsr-d4">🍵 D5 6.2 慢时光</a>
+    <a href="#hsr-d5">✈️ D6 6.3 返程</a>
+  </div>
+
+  <h3>5 天总览</h3>
+  <table>
+    <thead><tr><th>日期</th><th>主行程</th><th>住宿</th><th>交通</th></tr></thead>
+    <tbody>
+      <tr><td>5.29 周五</td><td>晚航班飞贵阳</td><td rowspan="3" style="text-align:center; background:#eafaf3 !important;">贵阳北站附近<br>（连住 3 晚）</td><td>飞机</td></tr>
+      <tr><td>5.30 周六</td><td>高铁往返安顺西 → 黄果树</td><td>打车+高铁</td></tr>
+      <tr><td>5.31 周日</td><td>高铁往返荔波 → 小七孔</td><td>高铁</td></tr>
+      <tr><td>6.1 周一</td><td>换酒店到市区 → 甲秀楼 → 黔灵山 → 二七路</td><td rowspan="2" style="text-align:center; background:#eafaf3 !important;">贵阳甲秀楼<br>（连住 2 晚）</td><td>地铁+步行</td></tr>
+      <tr><td>6.2 周二</td><td>慢时光：文昌阁 + 花果园 + 青云路</td><td>步行+打车</td></tr>
+      <tr><td>6.3 周三</td><td>上午市区 → 14:00 去机场</td><td>—（返程）</td><td>打车</td></tr>
+    </tbody>
+  </table>
+
+  <div class="day-card" id="hsr-d0">
     <div class="day-header">
-      <div class="day-title">🛫 Day 0 · 5.29 周五 · 北京/西安 → 贵阳</div>
+      <div class="day-title">🛫 D1 · 5.29 周五 · 北京/西安 → 贵阳</div>
       <span class="day-tag info">出发日</span>
     </div>
     <ul class="timeline">
-      <li>
-        <span class="time">白天</span>
-        <div class="content">两人各自工作，下班后赶往出发机场
-          <span class="note">• 北京：首都机场（T2 或 T3，按航司定）<br>• 西安：咸阳机场（T3/T5）</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">晚班航班</span>
-        <div class="content">两人约同时到达贵阳龙洞堡 T3，出口汇合后一起打车
-          <span class="note">• 北京→贵阳（约 3.5h）：推荐 21:00 左右起飞，00:20 落地<br>• 西安→贵阳（约 2.5h）：推荐 21:50 左右起飞，00:20 落地<br>• 实际航班以当日售票为准，订票时优先选"同时到达 00:20 前后"</span>
-        </div>
-      </li>
+      <li><span class="time">21:00 起飞</span><div class="content">• 北京：21:00 起飞，00:20 落地<br>• 西安：21:50 起飞，00:20 落地<br>两人 T3 出口汇合后一起打车</div></li>
+      <li><span class="time">00:20</span><div class="content">落龙洞堡 T3 → 出机场打车去贵阳北站附近酒店<span class="note">约 45 分钟车程</span></div></li>
+      <li><span class="time">01:30</span><div class="content">入住睡觉</div></li>
     </ul>
-    <div class="tips-box">
-      <h4>⚠️ 夜航注意</h4>
-      <ul>
-        <li>托运行李尽量精简，凌晨拿行李等的时间长</li>
-        <li>手机装好【高德地图 · 贵州离线包】【携程/飞猪】【12306】【美团】【"黄果树旅游"和"荔波小七孔景区"公众号】</li>
-        <li>贵阳当地 26–30℃，日夜温差大，带一件长袖薄外套</li>
-      </ul>
-    </div>
   </div>
 
-  <div class="day-card highlight" id="day1">
+  <div class="day-card highlight" id="hsr-d1">
     <div class="day-header">
-      <div class="day-title">💧 Day 1 · 5.30 周六 · 黄果树瀑布</div>
-      <span class="day-tag">强度 · 中</span>
+      <div class="day-title">💧 D2 · 5.30 周六 · 黄果树瀑布</div>
+      <span class="day-tag">强度·中</span>
     </div>
     <ul class="timeline">
-      <li>
-        <span class="time">00:20</span>
-        <div class="content">落龙洞堡 T3，出机场打车去贵阳北站附近酒店
-          <span class="note">约 45 分钟车程。凌晨 1 点地铁停运，直接打车</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">01:30</span>
-        <div class="content">入住贵阳北站附近酒店睡觉</div>
-      </li>
-      <li>
-        <span class="time">08:45</span>
-        <div class="content">起床（半夜才到贵阳，睡饱再出发，不赶早班车）</div>
-      </li>
-      <li>
-        <span class="time">09:15</span>
-        <div class="content">酒店早餐或步行去贵阳北站地下一层美食城吃粉</div>
-      </li>
-      <li>
-        <span class="time">09:51</span>
-        <div class="content">贵阳北 → 安顺西 <strong>G2871</strong>（29 分钟，10:20 到）
-          <span class="note">备选：C6031 09:20→09:52（更早） / G5383 10:15→10:45（更晚）</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">10:30</span>
-        <div class="content">安顺西站出站，乘景区直通车或打车去黄果树景区
-          <span class="note">直通车约 40 分钟，"黄果树旅游"公众号预订；也可门口拼车</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">11:15</span>
-        <div class="content"><strong>抵达黄果树景区游客中心</strong>，检票入园（刷身份证），乘观光车</div>
-      </li>
-      <li>
-        <span class="time">11:30–13:00</span>
-        <div class="content"><strong>第一站：陡坡塘瀑布</strong>（87 版《西游记》片尾瀑布）
-          <span class="note">扁平宽瀑布，约 1.5 小时，慢慢拍</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">13:00–15:30</span>
-        <div class="content"><strong>第二站：天星桥景区</strong>（喀斯特水上石林 + 数生步 + 银链坠潭瀑布）
-          <span class="note">徒步约 2 小时，中途在景区内简餐</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">15:30–18:00</span>
-        <div class="content"><strong>第三站：大瀑布</strong>（压轴大戏，务必走水帘洞后面！）
-          <span class="note">上下山有步道和扶梯，体力一般走 2 小时足够；黄昏光线拍瀑布更好</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">18:00</span>
-        <div class="content">景区慢出，观光车回游客中心</div>
-      </li>
-      <li>
-        <span class="time">18:30–20:30</span>
-        <div class="content"><strong>在景区门口/安顺西站附近吃晚饭</strong>（吃饱再动身，不急着赶车）
-          <span class="note">安顺特色：黄记油炸鸡、安顺裹卷、夺夺粉、破酥包</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">20:45</span>
-        <div class="content">直通车/打车到安顺西站</div>
-      </li>
-      <li>
-        <span class="time">21:39</span>
-        <div class="content">安顺西 → 贵阳北 <strong>G5396（末班）</strong>（31 分钟，22:10 到）
-          <span class="note">备选末班：C6034 21:18→21:51 / G2842 20:23→20:55（更早 1 小时，回来还能吃夜宵）</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">22:30</span>
-        <div class="content">到贵阳北，步行回酒店休息
-          <span class="note">今晚不去夜市，二七路小吃街挪到 6.1 晚（Day 3）</span>
-        </div>
-      </li>
+      <li><span class="time">08:45</span><div class="content">起床（睡饱再走）</div></li>
+      <li><span class="time">09:15</span><div class="content">早餐</div></li>
+      <li><span class="time">09:51</span><div class="content">贵阳北 → 安顺西 <strong>G2871</strong>（10:20 到）</div></li>
+      <li><span class="time">10:30</span><div class="content">乘景区直通车去黄果树（40 分钟）</div></li>
+      <li><span class="time">11:15</span><div class="content">入园，乘观光车</div></li>
+      <li><span class="time">11:30–13:00</span><div class="content"><strong>陡坡塘瀑布</strong>（西游记片尾瀑布）</div></li>
+      <li><span class="time">13:00–15:30</span><div class="content"><strong>天星桥景区</strong>（喀斯特水上石林）</div></li>
+      <li><span class="time">15:30–18:00</span><div class="content"><strong>大瀑布</strong>（压轴，必走水帘洞）</div></li>
+      <li><span class="time">18:30–20:30</span><div class="content">在景区门口/安顺西站附近吃晚饭<span class="note">黄记油炸鸡、安顺裹卷、夺夺粉</span></div></li>
+      <li><span class="time">21:39</span><div class="content">安顺西 → 贵阳北 <strong>G5396 末班</strong>（22:10 到）</div></li>
+      <li><span class="time">22:30</span><div class="content">回酒店</div></li>
     </ul>
-    <div class="food-grid">
-      <div class="food-card">
-        <h4>🍽 景区内/镇上午餐</h4>
-        <ul>
-          <li><span class="must">黄记油炸鸡</span> · 景区门口老字号</li>
-          <li>安顺裹卷 · 特色米皮包豆芽</li>
-          <li>夺夺粉 · 酸辣开胃</li>
-          <li>破酥包 · 早餐/下午茶佳选</li>
-        </ul>
-      </div>
-      <div class="food-card">
-        <h4>🎫 门票提醒</h4>
-        <ul>
-          <li>门票 <strong>160 元</strong> + 观光车 <strong>50 元</strong> = 210/人</li>
-          <li>提前在"黄果树旅游"公众号预约</li>
-          <li>入园选 10:00–11:00 时段</li>
-          <li>刷身份证入园</li>
-        </ul>
-      </div>
-    </div>
   </div>
 
-  <div class="day-card highlight" id="day2">
+  <div class="day-card highlight" id="hsr-d2">
     <div class="day-header">
-      <div class="day-title">🌊 Day 2 · 5.31 周日 · 荔波小七孔</div>
-      <span class="day-tag warn">强度 · 高</span>
+      <div class="day-title">🌊 D3 · 5.31 周日 · 小七孔</div>
+      <span class="day-tag warn">强度·高</span>
     </div>
     <ul class="timeline">
-      <li>
-        <span class="time">08:00</span>
-        <div class="content">起床，快速洗漱</div>
-      </li>
-      <li>
-        <span class="time">08:30</span>
-        <div class="content">酒店/贵阳北站地下早餐（肠旺面最佳）</div>
-      </li>
-      <li>
-        <span class="time">09:00</span>
-        <div class="content">贵阳北 → 荔波 <strong>D7511</strong>（1h24 分，10:24 到）
-          <span class="note">备选：G2957 08:15→09:38（更早） / C9179 09:55→11:21（更晚）；贵南高铁班次少务必抢</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">10:30</span>
-        <div class="content">荔波站出站，乘景区直通车去小七孔西门
-          <span class="note">约 40 分钟，"荔波文旅"公众号订或门口拼车</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">11:15</span>
-        <div class="content"><strong>西门入园</strong>，检票 + 乘景区观光车反向游览</div>
-      </li>
-      <li>
-        <span class="time">11:30–12:15</span>
-        <div class="content"><strong>① 卧龙潭</strong>：碧绿深潭，多层叠瀑</div>
-      </li>
-      <li>
-        <span class="time">12:15–12:45</span>
-        <div class="content"><strong>② 鸳鸯湖</strong>：可划船（景区附加项，时间紧可跳过）</div>
-      </li>
-      <li>
-        <span class="time">12:45–13:30</span>
-        <div class="content">午餐：景区内简餐或服务区打尖
-          <span class="note">推荐提前买景区便当，或出景区在门口镇子上吃荔波酸汤鱼</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">13:30–14:30</span>
-        <div class="content"><strong>③ 翠谷瀑布 + 水上森林</strong>：趟水玩的地方，穿防滑鞋/凉鞋</div>
-      </li>
-      <li>
-        <span class="time">14:30–15:30</span>
-        <div class="content"><strong>④ 68 级跌水瀑布</strong>：层层叠叠，拍照点密集</div>
-      </li>
-      <li>
-        <span class="time">15:30–16:30</span>
-        <div class="content"><strong>⑤ 拉雅瀑布</strong>：可以穿过水帘</div>
-      </li>
-      <li>
-        <span class="time">16:30–17:45</span>
-        <div class="content"><strong>⑥ 小七孔古桥</strong>（压轴打卡点，7 孔石桥跨樟江，日落前光线最美）</div>
-      </li>
-      <li>
-        <span class="time">17:45</span>
-        <div class="content">出景区，直通车到景区门口镇上</div>
-      </li>
-      <li>
-        <span class="time">18:15–20:15</span>
-        <div class="content"><strong>荔波镇上吃晚饭</strong>（慢吃，景区玩累了好好坐下）
-          <span class="note">必吃：荔波酸汤鱼、炸毛辣果、樟江鱼；镇上比贵阳更地道</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">20:30</span>
-        <div class="content">打车/直通车到荔波站</div>
-      </li>
-      <li>
-        <span class="time">21:02</span>
-        <div class="content">荔波 → 贵阳北 <strong>G8524</strong>（1h14 分，22:16 到）
-          <span class="note">备选：C5832 21:14→22:42（更晚末班，到贵阳已近 23 点）/ G8522 20:12→21:38（早一班，吃饭节奏更赶）</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">22:30</span>
-        <div class="content">到贵阳北，步行回酒店休息（今天是贵阳北最后一晚）
-          <span class="note">老凯俚酸汤鱼挪到 6.1 中午吃</span>
-        </div>
-      </li>
+      <li><span class="time">08:00</span><div class="content">起床、早餐</div></li>
+      <li><span class="time">09:00</span><div class="content">贵阳北 → 荔波 <strong>D7511</strong>（10:24 到）</div></li>
+      <li><span class="time">10:30</span><div class="content">直通车到小七孔西门</div></li>
+      <li><span class="time">11:15</span><div class="content">西门入园，反向游</div></li>
+      <li><span class="time">11:30–17:45</span><div class="content">卧龙潭→鸳鸯湖→翠谷→水上森林→68 级跌水→拉雅瀑布→小七孔古桥</div></li>
+      <li><span class="time">18:15–20:15</span><div class="content">荔波镇上吃晚饭<span class="note">荔波酸汤鱼、炸毛辣果</span></div></li>
+      <li><span class="time">21:02</span><div class="content">荔波 → 贵阳北 <strong>G8524 末班</strong>（22:16 到）</div></li>
+      <li><span class="time">22:30</span><div class="content">回酒店</div></li>
     </ul>
-    <div class="tips-box">
-      <h4>⚠️ 今日重点提示</h4>
-      <ul>
-        <li>行李：大箱子留贵阳北酒店，带双肩包 + 换洗衣服（水上森林可能湿鞋）</li>
-        <li>装备：防滑鞋/溯溪鞋/拖鞋、快干裤、防晒霜、雨衣（景区买更贵）</li>
-        <li>体力：全天步行约 8–10km，穿舒适运动鞋</li>
-        <li>吃饭：景区内贵且一般，建议 12:30 前在景区门口镇上吃完再进</li>
-        <li>末班车：推荐 G8524 21:02→22:16（1h14 分）；更晚可选 C5832 21:14→22:42，但到贵阳近 23 点较累</li>
-      </ul>
-    </div>
   </div>
 
-  <div class="day-card" id="day3">
+  <div class="day-card" id="hsr-d3">
     <div class="day-header">
-      <div class="day-title">🏙 Day 3 · 6.1 周一 · 贵阳市区</div>
-      <span class="day-tag info">强度 · 低</span>
+      <div class="day-title">🏙 D4 · 6.1 周一 · 贵阳市区</div>
+      <span class="day-tag info">强度·低</span>
     </div>
     <ul class="timeline">
-      <li>
-        <span class="time">09:00</span>
-        <div class="content">贵阳北酒店退房，打车去市区新酒店（甲秀楼/大十字）
-          <span class="note">约 30 分钟</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">10:00</span>
-        <div class="content">新酒店存行李（check-in 一般 14:00 后，可先存后逛）</div>
-      </li>
-      <li>
-        <span class="time">10:30</span>
-        <div class="content">早午饭：<strong>程肠旺</strong>（肠旺面，贵阳早餐扛把子）</div>
-      </li>
-      <li>
-        <span class="time">11:30</span>
-        <div class="content"><strong>甲秀楼 + 翠微园</strong>（免费开放，南明河上楼阁，贵阳地标）
-          <span class="note">慢逛 1 小时，拍照角度多</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">13:00</span>
-        <div class="content">午餐：<strong>老凯俚酸汤鱼</strong>（甲秀楼总店步行可达）</div>
-      </li>
-      <li>
-        <span class="time">14:30</span>
-        <div class="content">打车去 <strong>黔灵山公园</strong>（约 10 分钟车程）
-          <span class="note">重点看：弘福寺、麒麟洞、野生猕猴（小心抢东西！食物别外露）、九曲径</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">17:30</span>
-        <div class="content">回酒店正式 check-in 休息</div>
-      </li>
-      <li>
-        <span class="time">19:00</span>
-        <div class="content"><strong>二七路小吃街扫荡</strong>（详见吃喝章节）</div>
-      </li>
-      <li>
-        <span class="time">22:00</span>
-        <div class="content">回酒店</div>
-      </li>
+      <li><span class="time">09:00</span><div class="content">退房，打车去市区甲秀楼酒店</div></li>
+      <li><span class="time">10:30</span><div class="content">早午餐 <strong>程肠旺</strong></div></li>
+      <li><span class="time">11:30</span><div class="content"><strong>甲秀楼 + 翠微园</strong>（免费）</div></li>
+      <li><span class="time">13:00</span><div class="content"><strong>老凯俚酸汤鱼</strong>午餐</div></li>
+      <li><span class="time">14:30</span><div class="content"><strong>黔灵山公园</strong>（5 元，看猴子）</div></li>
+      <li><span class="time">17:30</span><div class="content">回酒店休息</div></li>
+      <li><span class="time">19:00</span><div class="content"><strong>二七路小吃街</strong>扫荡</div></li>
     </ul>
   </div>
 
-  <div class="day-card" id="day4">
+  <div class="day-card" id="hsr-d4">
     <div class="day-header">
-      <div class="day-title">🍵 Day 4 · 6.2 周二 · 贵阳慢时光（放松日）</div>
-      <span class="day-tag info">强度 · 低</span>
+      <div class="day-title">🍵 D5 · 6.2 周二 · 贵阳慢时光</div>
+      <span class="day-tag info">强度·低</span>
     </div>
     <ul class="timeline">
-      <li>
-        <span class="time">09:30 前后</span>
-        <div class="content">睡到自然醒（前两天景区强度大，今天放轻松）</div>
-      </li>
-      <li>
-        <span class="time">10:30</span>
-        <div class="content">晚早餐：<strong>蒋家粉馆</strong>（牛肉粉）或 <strong>丝恋糖醋丝娃娃</strong>开胃</div>
-      </li>
-      <li>
-        <span class="time">11:30–13:00</span>
-        <div class="content"><strong>文昌阁</strong>（免费，贵阳古城地标，明代九角不等边古阁）
-          <span class="note">老城区慢逛，拍照点多，步行可达</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">13:00</span>
-        <div class="content">午餐：<strong>豆米火锅</strong>（丝恋豆米）或 <strong>辣子鸡</strong>（厢厢桂花里），挑 Day 3 没吃的</div>
-      </li>
-      <li>
-        <span class="time">14:30–17:00</span>
-        <div class="content">下午慢时光（三选一，完全看心情）：
-          <ul style="margin-left:20px; margin-top:6px;">
-            <li><strong>A. 观山湖公园</strong>：新区大公园，租共享单车绕湖约 8km，适合放空</li>
-            <li><strong>B. 贵州省博物馆</strong>：免费，了解少数民族文化，空调足适合歇脚</li>
-            <li><strong>C. 咖啡馆/茶馆慢坐</strong>：爽爽贵阳、星巴克观山湖店、或酒店附近咖啡馆</li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <span class="time">17:30</span>
-        <div class="content"><strong>花果园双子塔</strong>打卡 + 万象汇商场逛街
-          <span class="note">全国最高楼盘，贵阳 CBD 标志；万象汇里有商场、电影院、餐厅</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">19:00</span>
-        <div class="content"><strong>青云路夜市收官</strong>（网红级，比二七路更生猛）
-          <span class="note">必吃：烤脑花、烤鱼、糯米饭、丝娃娃、烤豆腐、烙锅、木姜子冰粉</span>
-        </div>
-      </li>
-      <li>
-        <span class="time">22:00</span>
-        <div class="content">回酒店，整理行李</div>
-      </li>
+      <li><span class="time">09:30</span><div class="content">睡到自然醒</div></li>
+      <li><span class="time">10:30</span><div class="content">晚早餐 <strong>蒋家粉馆</strong></div></li>
+      <li><span class="time">11:30–13:00</span><div class="content"><strong>文昌阁</strong>（免费古阁）</div></li>
+      <li><span class="time">13:00</span><div class="content">午餐 <strong>豆米火锅</strong>或 <strong>辣子鸡</strong></div></li>
+      <li><span class="time">14:30–17:00</span><div class="content">慢时光三选一：观山湖公园 / 贵州省博物馆 / 咖啡馆</div></li>
+      <li><span class="time">17:30</span><div class="content"><strong>花果园双子塔</strong>打卡</div></li>
+      <li><span class="time">19:00</span><div class="content"><strong>青云路夜市</strong>收官</div></li>
     </ul>
-    <div class="info-box">
-      <h4>💡 今天原则</h4>
-      <ul>
-        <li>前两天景区强度大，今天以放松为主，以上行程都可自由调节</li>
-        <li>不想出门就睡一天；想走就慢慢逛，累了随时回酒店</li>
-        <li>唯一"必去"是晚上青云路夜市（贵阳收官之战）</li>
-      </ul>
-    </div>
   </div>
 
-  <div class="day-card" id="day5">
+  <div class="day-card" id="hsr-d5">
     <div class="day-header">
-      <div class="day-title">✈️ Day 5 · 6.3 周三 · 贵阳 → 北京/西安</div>
+      <div class="day-title">✈️ D6 · 6.3 周三 · 返程</div>
       <span class="day-tag info">返程日</span>
     </div>
     <ul class="timeline">
-      <li>
-        <span class="time">09:00</span>
-        <div class="content">最后一顿早餐：<strong>糕粑稀饭 + 肠旺面</strong>（带点贵阳味道走）</div>
-      </li>
-      <li>
-        <span class="time">10:30</span>
-        <div class="content">酒店退房，行李寄存前台</div>
-      </li>
-      <li>
-        <span class="time">11:00–13:00</span>
-        <div class="content">自由活动选项：
-          <ul style="margin-left:20px; margin-top:6px;">
-            <li><strong>A.</strong> 观山湖咖啡馆慢坐 + 书店</li>
-            <li><strong>B.</strong> 北京路 / 花果园逛街购物</li>
-            <li><strong>C.</strong> 喷水池老城区再逛一圈吃小吃</li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <span class="time">13:00</span>
-        <div class="content">回酒店取行李，吃简餐（粉/面/面包）</div>
-      </li>
-      <li>
-        <span class="time">14:00</span>
-        <div class="content">打车去 <strong>龙洞堡机场 T3</strong>（30 分钟）</div>
-      </li>
-      <li>
-        <span class="time">15:00</span>
-        <div class="content">值机 + 过安检</div>
-      </li>
-      <li>
-        <span class="time">16:00 前后</span>
-        <div class="content">两人各自航班起飞
-          <span class="note">• 贵阳→北京（约 3.5h）：约 19:30–20:00 落首都机场<br>• 贵阳→西安（约 2.5h）：约 18:30–19:00 落咸阳机场</span>
-        </div>
-      </li>
+      <li><span class="time">09:00</span><div class="content">最后早餐 <strong>糕粑稀饭</strong></div></li>
+      <li><span class="time">11:00–13:00</span><div class="content">自由活动 / 买伴手礼</div></li>
+      <li><span class="time">14:00</span><div class="content">打车去 <strong>龙洞堡 T3</strong>（30 分钟）</div></li>
+      <li><span class="time">16:00 前后</span><div class="content">航班起飞<span class="note">贵阳→北京 ~3.5h；贵阳→西安 ~2.5h</span></div></li>
     </ul>
-    <div class="info-box">
-      <h4>🛍 贵州伴手礼推荐</h4>
+  </div>
+
+  <h3>🚄 高铁班次速查</h3>
+  <table>
+    <thead><tr><th>方向</th><th>车次</th><th>出发</th><th>到达</th></tr></thead>
+    <tbody>
+      <tr><td>5.30 去 黄果树</td><td class="star">G2871</td><td>09:51</td><td>10:20</td></tr>
+      <tr><td>5.30 回 贵阳</td><td class="star">G5396 末班</td><td>21:39</td><td>22:10</td></tr>
+      <tr><td>5.31 去 小七孔</td><td class="star">D7511</td><td>09:00</td><td>10:24</td></tr>
+      <tr><td>5.31 回 贵阳</td><td class="star">G8524</td><td>21:02</td><td>22:16</td></tr>
+    </tbody>
+  </table>
+
+  <h3>💰 高铁版费用预估</h3>
+  <table>
+    <thead><tr><th>项</th><th>金额（2 人）</th></tr></thead>
+    <tbody>
+      <tr><td>高铁 4 段</td><td>~1,100</td></tr>
+      <tr><td>景区直通车</td><td>~200</td></tr>
+      <tr><td>市区打车</td><td>200-300</td></tr>
+      <tr><td>住宿 5 晚</td><td>1,650-2,650</td></tr>
+      <tr><td>餐饮 5.5 天</td><td>2,000-3,000</td></tr>
+      <tr><td>门票</td><td>720</td></tr>
+      <tr><td>杂项</td><td>200-400</td></tr>
+      <tr style="background:#fff9e6 !important;"><td><strong>小计（不含机票）</strong></td><td><strong>5,870–8,370</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========== TAB · 方案2 自驾A ========== -->
+<div class="tab-content" id="tab-drvA">
+  <h2>🚗 方案 2 · 自驾 A · 先小七孔后黄果树（5 天 4 晚 · 5.29–6.2）</h2>
+  <div class="tldr driving">
+    <strong>接近原计划顺序</strong>：D1 落地 → 都匀过夜 → D2 玩小七孔后开 5h 到黄果树 → D3 玩黄果树后回贵阳还车 → D4-D5 贵阳市区。贵阳市区 1.5 天，2 天景区高强度。
+  </div>
+
+  <div class="sub-nav">
+    <a href="#a-d1">🛬 D1 5.29 落地→都匀</a>
+    <a href="#a-d2">🌊 D2 5.30 小七孔→黄果树</a>
+    <a href="#a-d3">💧 D3 5.31 黄果树→贵阳</a>
+    <a href="#a-d4">🏙 D4 6.1 市区</a>
+    <a href="#a-d5">✈️ D5 6.2 返程</a>
+  </div>
+
+  <h3>5 天总览</h3>
+  <table>
+    <thead><tr><th>日期</th><th>主行程</th><th>当日开车</th><th>住宿</th></tr></thead>
+    <tbody>
+      <tr><td>5.29 周五</td><td>21 点落地→取车→开车去都匀</td><td>200 km / 2.5h</td><td>都匀</td></tr>
+      <tr><td>5.30 周六</td><td>都匀→小七孔（玩 5.5h）→开车去黄果树</td><td>430 km / 6h</td><td>黄果树周边</td></tr>
+      <tr><td>5.31 周日</td><td>玩黄果树整天→开回贵阳还车</td><td>150 km / 2h</td><td>贵阳市区</td></tr>
+      <tr><td>6.1 周一</td><td>贵阳市区整天</td><td>—</td><td>贵阳市区</td></tr>
+      <tr><td>6.2 周二</td><td>市区半天→16:00 去机场→19-20 点飞</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>👍 优点</h4>
       <ul>
-        <li><strong>老干妈</strong>（贵阳造，比外地便宜）</li>
-        <li><strong>黔辣子（油辣椒）</strong>各品牌都可</li>
-        <li><strong>都匀毛尖 / 湄潭翠芽</strong>（贵州绿茶）</li>
-        <li><strong>酸汤料包</strong>（回家复刻酸汤鱼）</li>
-        <li><strong>玫瑰糖 / 米酒</strong>（贵州特色）</li>
-        <li><strong>茅台镇酱香酒</strong>（非茅台品牌也好喝）</li>
+        <li>顺序贴近原意（5.30 小七孔 + 5.31 黄果树）</li>
+        <li>D1 中途过夜不熬夜跑长途</li>
+        <li>贵阳市区有完整 1.5 天</li>
+        <li>5.31 黄果树离贵阳近，玩完直接回</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>👎 缺点</h4>
+      <ul>
+        <li>D2 是高强度日：玩 5.5h + 开 5h</li>
+        <li>D2 晚上 16:30-21:30 开高速 5h 较累</li>
+        <li>必须 5.29 当晚开 200 km 夜路（都匀过夜）</li>
+        <li>租车 3 天，异地还车要确认</li>
       </ul>
     </div>
   </div>
+
+  <div class="day-card driving" id="a-d1">
+    <div class="day-header">
+      <div class="day-title">🛬 D1 · 5.29 周五 · 落地 → 都匀</div>
+      <span class="day-tag warn">夜路 200km</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">20:30–21:00</span><div class="content">两人落龙洞堡 T3</div></li>
+      <li><span class="time">21:30</span><div class="content">机场租车点取车（SUV + 全险）</div></li>
+      <li><span class="time">22:00</span><div class="content">出发上 G75 兰海高速 → 都匀方向</div></li>
+      <li><span class="time">22:00–00:30</span><div class="content">开夜路 200 km（高速为主）<span class="note">中途独山服务区可休息加油</span></div></li>
+      <li><span class="time">00:30</span><div class="content">都匀市区入住，行李锁车上即可<span class="note">推荐都匀东站附近全季 / 亚朵 / 锦江都城</span></div></li>
+    </ul>
+  </div>
+
+  <div class="day-card driving" id="a-d2">
+    <div class="day-header">
+      <div class="day-title">🌊 D2 · 5.30 周六 · 小七孔 → 黄果树（高强度日）</div>
+      <span class="day-tag danger">开车 6h</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">08:00</span><div class="content">起床、早餐</div></li>
+      <li><span class="time">08:30</span><div class="content">出发开 80 km → 小七孔（1h）</div></li>
+      <li><span class="time">09:30</span><div class="content">到小七孔西门停车场</div></li>
+      <li><span class="time">10:00</span><div class="content">入园（西门进，反向游览）</div></li>
+      <li><span class="time">10:00–15:30</span><div class="content"><strong>精简版 5.5h</strong>：卧龙潭 → 鸳鸯湖 → 翠谷 → 水上森林 → 68 级跌水 → 拉雅瀑布 → 小七孔古桥</div></li>
+      <li><span class="time">15:30–16:30</span><div class="content">出景区，门口简餐<span class="note">荔波酸汤鱼 / 炸毛辣果</span></div></li>
+      <li><span class="time">16:30</span><div class="content">出发开车去黄果树（350 km / 5h，全程高速）</div></li>
+      <li><span class="time">21:30 前</span><div class="content">到黄果树景区附近<span class="note">推荐住镇宁/黄果树镇，黄果树假日酒店或镇宁麗枫</span></div></li>
+    </ul>
+    <div class="tips-box">
+      <h4>⚠️ D2 安全提醒</h4>
+      <ul>
+        <li>16:30 后开 5h 长途，途中加油 + 服务区歇 15 分钟</li>
+        <li>行李一直在车上，景区停车场尽量选有看护的</li>
+        <li>带瓶咖啡或红牛备着，开车困了立即休息</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day-card driving" id="a-d3">
+    <div class="day-header">
+      <div class="day-title">💧 D3 · 5.31 周日 · 黄果树 → 贵阳还车</div>
+      <span class="day-tag">开车 2h</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">09:00</span><div class="content">起床、早餐</div></li>
+      <li><span class="time">10:00</span><div class="content">进黄果树景区，乘观光车</div></li>
+      <li><span class="time">10:15–12:00</span><div class="content">陡坡塘瀑布</div></li>
+      <li><span class="time">12:00–14:30</span><div class="content">天星桥景区（含简餐）</div></li>
+      <li><span class="time">14:30–17:00</span><div class="content">大瀑布（压轴）</div></li>
+      <li><span class="time">17:30</span><div class="content">出景区</div></li>
+      <li><span class="time">18:00</span><div class="content">出发开 150 km 回贵阳（G60 高速 2h）</div></li>
+      <li><span class="time">20:00</span><div class="content">到贵阳市区，先吃晚饭再还车<span class="note">老凯俚酸汤鱼（甲秀楼总店）</span></div></li>
+      <li><span class="time">22:00</span><div class="content">市区还车点还车</div></li>
+      <li><span class="time">22:30</span><div class="content">入住市区酒店</div></li>
+    </ul>
+  </div>
+
+  <div class="day-card" id="a-d4">
+    <div class="day-header">
+      <div class="day-title">🏙 D4 · 6.1 周一 · 贵阳市区整天</div>
+      <span class="day-tag info">强度·低</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">09:30</span><div class="content">睡到自然醒</div></li>
+      <li><span class="time">10:30</span><div class="content">早午餐 <strong>程肠旺</strong> 或 <strong>蒋家粉馆</strong></div></li>
+      <li><span class="time">11:30</span><div class="content"><strong>甲秀楼 + 翠微园</strong>慢逛</div></li>
+      <li><span class="time">13:00</span><div class="content">午餐 <strong>豆米火锅</strong> 或 <strong>辣子鸡</strong></div></li>
+      <li><span class="time">14:30</span><div class="content"><strong>黔灵山公园</strong>（看猴子）</div></li>
+      <li><span class="time">17:30</span><div class="content">回酒店休息</div></li>
+      <li><span class="time">19:00</span><div class="content"><strong>二七路小吃街</strong>扫荡</div></li>
+    </ul>
+  </div>
+
+  <div class="day-card" id="a-d5">
+    <div class="day-header">
+      <div class="day-title">✈️ D5 · 6.2 周二 · 收尾 + 飞机</div>
+      <span class="day-tag info">返程日</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">09:30</span><div class="content">睡到自然醒</div></li>
+      <li><span class="time">10:30</span><div class="content">早午餐 <strong>蒋家粉馆</strong></div></li>
+      <li><span class="time">11:30</span><div class="content"><strong>文昌阁</strong>慢逛</div></li>
+      <li><span class="time">13:00</span><div class="content">午餐 + 下午茶 <strong>糕粑稀饭、丝娃娃</strong></div></li>
+      <li><span class="time">15:00</span><div class="content">回酒店取行李</div></li>
+      <li><span class="time">16:00</span><div class="content">打车去 <strong>龙洞堡 T3</strong>（30 分钟）</div></li>
+      <li><span class="time">17:00</span><div class="content">值机 + 过安检</div></li>
+      <li><span class="time">19–20:00</span><div class="content">航班起飞</div></li>
+    </ul>
+  </div>
+
+  <h3>🛣 自驾 A 路线明细</h3>
+  <table>
+    <thead><tr><th>段</th><th>里程</th><th>时长</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>机场 → 都匀</td><td>200 km</td><td>2.5 h</td><td>G75 兰海高速，全程高速</td></tr>
+      <tr><td>都匀 → 小七孔</td><td>80 km</td><td>1 h</td><td>S25 凯里都安线</td></tr>
+      <tr><td>小七孔 → 黄果树</td><td>350 km</td><td>5 h</td><td>S55 + G60，部分山区高速</td></tr>
+      <tr><td>黄果树 → 贵阳市区</td><td>150 km</td><td>2 h</td><td>G60 沪昆高速</td></tr>
+      <tr style="background:#fff9e6 !important;"><td><strong>合计</strong></td><td><strong>780 km</strong></td><td><strong>10.5 h</strong></td><td>分 3 天开</td></tr>
+    </tbody>
+  </table>
+
+  <h3>💰 自驾 A 费用预估（2 人）</h3>
+  <table>
+    <thead><tr><th>项</th><th>金额</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>租车 3 天（含全险 + 不计免赔）</td><td>1,050-1,200</td><td>SUV 350-400/天 × 3 天</td></tr>
+      <tr><td>异地还车费</td><td>0-200</td><td>机场取-市区还，部分平台免</td></tr>
+      <tr><td>油费</td><td>~550</td><td>780 km × 0.7 元/km（SUV）</td></tr>
+      <tr><td>过路费</td><td>~500</td><td>全程高速</td></tr>
+      <tr><td>停车费</td><td>100-200</td><td>景区 + 都匀/黄果树/贵阳酒店</td></tr>
+      <tr><td>市区打车</td><td>100-200</td><td>D4-D5 不开车</td></tr>
+      <tr><td>住宿 4 晚</td><td>1,200-2,000</td><td>都匀 1 + 黄果树 1 + 贵阳 2</td></tr>
+      <tr><td>餐饮 5 天</td><td>1,500-2,500</td><td>2 人</td></tr>
+      <tr><td>门票</td><td>720</td><td>黄果树 420 + 小七孔 300</td></tr>
+      <tr><td>杂项</td><td>200-400</td><td>水/零食/纪念品</td></tr>
+      <tr style="background:#fff9e6 !important;"><td><strong>小计（不含机票）</strong></td><td><strong>5,920–8,470</strong></td><td>2 人合计</td></tr>
+    </tbody>
+  </table>
 </div>
 
-<!-- ====== TAB 4: 景区门票 ====== -->
-<div class="tab-content" id="tab-ticket">
-  <h2>④ 景区门票价格汇总</h2>
+<!-- ========== TAB · 方案3 自驾B ========== -->
+<div class="tab-content" id="tab-drvB">
+  <h2>🚗 方案 3 · 自驾 B · 先黄果树后小七孔（5 天 4 晚 · 5.29–6.2）</h2>
+  <div class="tldr driving">
+    <strong>体验最舒服</strong>：D1 只开 2h 安全到黄果树住下；D2 整天玩黄果树不挪窝；D3 白天开 5h 到小七孔玩半天；D4 早回贵阳。<strong>所有长途路段都在白天</strong>，但贵阳只剩 0.7 天。
+  </div>
+
+  <div class="sub-nav">
+    <a href="#b-d1">🛬 D1 5.29 落地→黄果树</a>
+    <a href="#b-d2">💧 D2 5.30 黄果树整天</a>
+    <a href="#b-d3">🚗 D3 5.31 黄果树→小七孔</a>
+    <a href="#b-d4">🌊 D4 6.1 小七孔→贵阳</a>
+    <a href="#b-d5">✈️ D5 6.2 返程</a>
+  </div>
+
+  <h3>5 天总览</h3>
   <table>
-    <thead>
-      <tr>
-        <th style="width:140px">景区</th>
-        <th style="width:100px">大门票</th>
-        <th style="width:120px">必买附加</th>
-        <th style="width:100px">合计</th>
-        <th>预约方式</th>
-        <th style="width:80px">当日可购</th>
-      </tr>
-    </thead>
+    <thead><tr><th>日期</th><th>主行程</th><th>当日开车</th><th>住宿</th></tr></thead>
     <tbody>
-      <tr style="background:#fff9e6 !important;">
-        <td><strong>黄果树瀑布</strong><br>（5.30 周六）</td>
-        <td><strong>160 元</strong></td>
-        <td>观光车 50 元<br>（必买）</td>
-        <td><strong>210 元</strong></td>
-        <td>公众号「黄果树旅游」或美团<br><span class="star">需提前 1–7 天预约</span></td>
-        <td>紧张</td>
-      </tr>
-      <tr style="background:#fff9e6 !important;">
-        <td><strong>小七孔</strong><br>（5.31 周日）</td>
-        <td><strong>110 元</strong></td>
-        <td>观光车 40 元<br>（必买）</td>
-        <td><strong>150 元</strong></td>
-        <td>公众号「荔波小七孔景区」<br>或美团/携程<br><span class="star">需提前 3–5 天预约</span></td>
-        <td>旺季难</td>
-      </tr>
-      <tr>
-        <td>黔灵山公园<br>（6.1 周一）</td>
-        <td><strong>5 元</strong></td>
-        <td>弘福寺 2 元<br>（可选）</td>
-        <td><strong>5 元</strong></td>
-        <td>无需预约，现场购票</td>
-        <td>可</td>
-      </tr>
-      <tr>
-        <td>甲秀楼 / 翠微园<br>（6.1 周一）</td>
-        <td>免费</td>
-        <td>—</td>
-        <td><strong>0 元</strong></td>
-        <td>—</td>
-        <td>—</td>
-      </tr>
-      <tr>
-        <td>文昌阁 / 花果园<br>（6.2 周二）</td>
-        <td>免费</td>
-        <td>—</td>
-        <td><strong>0 元</strong></td>
-        <td>—</td>
-        <td>—</td>
-      </tr>
+      <tr><td>5.29 周五</td><td>21 点落地→取车→开车去黄果树</td><td>150 km / 2h</td><td>黄果树周边</td></tr>
+      <tr><td>5.30 周六</td><td>整天玩黄果树</td><td>0 km</td><td>黄果树周边（连住）</td></tr>
+      <tr><td>5.31 周日</td><td>白天开 5h 去小七孔→玩半天</td><td>350 km / 5h</td><td>荔波县城</td></tr>
+      <tr><td>6.1 周一</td><td>开 4h 回贵阳→还车→下午晚上市区</td><td>280 km / 4h</td><td>贵阳市区</td></tr>
+      <tr><td>6.2 周二</td><td>市区半天→16:00 去机场→19-20 点飞</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>👍 优点</h4>
+      <ul>
+        <li>D1 只开 2h，<strong>不熬夜跑长途</strong></li>
+        <li>D2 黄果树连住不搬行李，玩得透</li>
+        <li>D3 长途 5h 全在白天开</li>
+        <li>D4 早上 9 点开车，下午到贵阳</li>
+        <li>体力分布最均衡</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>👎 缺点</h4>
+      <ul>
+        <li>贵阳市区只剩 0.7 天（D4 下午+晚上 + D5 上午）</li>
+        <li>D3 下午到小七孔，只能玩半天景区</li>
+        <li>租车 4 天（多 1 天费用 ~400）</li>
+        <li>4 晚要换 3 个酒店：黄果树×2 + 荔波 + 贵阳</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day-card driving" id="b-d1">
+    <div class="day-header">
+      <div class="day-title">🛬 D1 · 5.29 周五 · 落地 → 黄果树</div>
+      <span class="day-tag info">短途 150km</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">20:30–21:00</span><div class="content">两人落龙洞堡 T3</div></li>
+      <li><span class="time">21:30</span><div class="content">机场租车点取车（SUV + 全险）</div></li>
+      <li><span class="time">22:00</span><div class="content">出发上 G60 沪昆高速 → 黄果树方向</div></li>
+      <li><span class="time">22:00–24:00</span><div class="content">开 150 km（高速 2h）<span class="note">距离短、不累，比方案 A 安全很多</span></div></li>
+      <li><span class="time">24:00</span><div class="content">到黄果树周边酒店入住<span class="note">推荐黄果树假日酒店或镇宁麗枫</span></div></li>
+    </ul>
+  </div>
+
+  <div class="day-card highlight" id="b-d2">
+    <div class="day-header">
+      <div class="day-title">💧 D2 · 5.30 周六 · 黄果树整天</div>
+      <span class="day-tag">不开车</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">09:00</span><div class="content">起床、早餐</div></li>
+      <li><span class="time">10:00</span><div class="content">进黄果树景区，乘观光车</div></li>
+      <li><span class="time">10:15–12:00</span><div class="content">陡坡塘瀑布</div></li>
+      <li><span class="time">12:00–14:30</span><div class="content">天星桥景区（含简餐）</div></li>
+      <li><span class="time">14:30–17:00</span><div class="content">大瀑布（压轴，黄昏光线最美）</div></li>
+      <li><span class="time">17:30</span><div class="content">出景区</div></li>
+      <li><span class="time">18:30</span><div class="content">在镇上吃晚饭<span class="note">黄记油炸鸡、安顺裹卷</span></div></li>
+      <li><span class="time">20:30</span><div class="content">回酒店休息<span class="note">连住第二晚不挪窝</span></div></li>
+    </ul>
+  </div>
+
+  <div class="day-card driving" id="b-d3">
+    <div class="day-header">
+      <div class="day-title">🚗 D3 · 5.31 周日 · 黄果树 → 小七孔</div>
+      <span class="day-tag warn">白天开 5h</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">07:00</span><div class="content">起床、早餐</div></li>
+      <li><span class="time">07:30</span><div class="content">退房，行李上车，出发</div></li>
+      <li><span class="time">07:30–12:30</span><div class="content">白天开车 350 km / 5h（中途服务区休息一次）</div></li>
+      <li><span class="time">12:30</span><div class="content">到小七孔西门停车场，午餐</div></li>
+      <li><span class="time">13:00</span><div class="content">入园，乘观光车反向游</div></li>
+      <li><span class="time">13:00–18:00</span><div class="content"><strong>精简版 5h</strong>：卧龙潭 → 翠谷 → 水上森林 → 68 级跌水 → 小七孔古桥（鸳鸯湖、拉雅瀑布可省）</div></li>
+      <li><span class="time">18:30</span><div class="content">出景区，开车 30 分钟去荔波县城</div></li>
+      <li><span class="time">19:00</span><div class="content">荔波县城吃晚饭<span class="note">荔波酸汤鱼、炸毛辣果</span></div></li>
+      <li><span class="time">21:00</span><div class="content">入住荔波县城酒店<span class="note">荔波亚朵或县城连锁酒店</span></div></li>
+    </ul>
+  </div>
+
+  <div class="day-card driving" id="b-d4">
+    <div class="day-header">
+      <div class="day-title">🌊 D4 · 6.1 周一 · 小七孔 → 贵阳还车</div>
+      <span class="day-tag warn">白天开 4h</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">08:30</span><div class="content">起床、早餐</div></li>
+      <li><span class="time">09:00</span><div class="content">退房，出发</div></li>
+      <li><span class="time">09:00–13:00</span><div class="content">白天开车 280 km / 4h 回贵阳</div></li>
+      <li><span class="time">13:00</span><div class="content">到贵阳市区，吃午饭<span class="note">老凯俚酸汤鱼</span></div></li>
+      <li><span class="time">14:30</span><div class="content">市区还车点还车</div></li>
+      <li><span class="time">15:00</span><div class="content">入住市区酒店</div></li>
+      <li><span class="time">15:30–17:30</span><div class="content"><strong>甲秀楼 + 翠微园</strong>慢逛</div></li>
+      <li><span class="time">19:00</span><div class="content"><strong>二七路小吃街</strong>扫荡<span class="note">丝娃娃、烤豆腐、糯米饭</span></div></li>
+    </ul>
+  </div>
+
+  <div class="day-card" id="b-d5">
+    <div class="day-header">
+      <div class="day-title">✈️ D5 · 6.2 周二 · 收尾 + 飞机</div>
+      <span class="day-tag info">返程日</span>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">09:00</span><div class="content">起床、早餐 <strong>程肠旺</strong></div></li>
+      <li><span class="time">10:30</span><div class="content"><strong>黔灵山公园</strong>（5 元，看猴子，2h）</div></li>
+      <li><span class="time">12:30</span><div class="content">午餐 <strong>豆米火锅</strong> 或 <strong>辣子鸡</strong></div></li>
+      <li><span class="time">14:00</span><div class="content"><strong>文昌阁</strong>快速一刷</div></li>
+      <li><span class="time">15:00</span><div class="content">回酒店取行李</div></li>
+      <li><span class="time">16:00</span><div class="content">打车去 <strong>龙洞堡 T3</strong>（30 分钟）</div></li>
+      <li><span class="time">17:00</span><div class="content">值机 + 过安检</div></li>
+      <li><span class="time">19–20:00</span><div class="content">航班起飞</div></li>
+    </ul>
+  </div>
+
+  <h3>🛣 自驾 B 路线明细</h3>
+  <table>
+    <thead><tr><th>段</th><th>里程</th><th>时长</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>机场 → 黄果树</td><td>150 km</td><td>2 h</td><td>G60 沪昆高速</td></tr>
+      <tr><td>黄果树（连住，0 km）</td><td>0 km</td><td>0 h</td><td>不挪窝</td></tr>
+      <tr><td>黄果树 → 小七孔</td><td>350 km</td><td>5 h</td><td>S55 + G75，部分山区</td></tr>
+      <tr><td>小七孔 → 贵阳市区</td><td>280 km</td><td>4 h</td><td>G75 兰海 + S25</td></tr>
+      <tr style="background:#fff9e6 !important;"><td><strong>合计</strong></td><td><strong>780 km</strong></td><td><strong>11 h</strong></td><td>分 3 天开</td></tr>
+    </tbody>
+  </table>
+
+  <h3>💰 自驾 B 费用预估（2 人）</h3>
+  <table>
+    <thead><tr><th>项</th><th>金额</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>租车 4 天（含全险 + 不计免赔）</td><td>1,400-1,600</td><td>SUV 350-400/天 × 4 天</td></tr>
+      <tr><td>异地还车费</td><td>0-200</td><td>机场取-市区还，部分平台免</td></tr>
+      <tr><td>油费</td><td>~550</td><td>780 km × 0.7 元/km</td></tr>
+      <tr><td>过路费</td><td>~500</td><td>全程高速</td></tr>
+      <tr><td>停车费</td><td>100-200</td><td>景区 + 黄果树/荔波/贵阳酒店</td></tr>
+      <tr><td>市区打车</td><td>50-100</td><td>仅 D5 上午 + 去机场</td></tr>
+      <tr><td>住宿 4 晚</td><td>1,300-2,100</td><td>黄果树 2 + 荔波 1 + 贵阳 1</td></tr>
+      <tr><td>餐饮 5 天</td><td>1,500-2,500</td><td>2 人</td></tr>
+      <tr><td>门票</td><td>720</td><td>黄果树 420 + 小七孔 300</td></tr>
+      <tr><td>杂项</td><td>200-400</td><td>水/零食/纪念品</td></tr>
+      <tr style="background:#fff9e6 !important;"><td><strong>小计（不含机票）</strong></td><td><strong>6,320–8,870</strong></td><td>2 人合计</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========== TAB · 门票 ========== -->
+<div class="tab-content" id="tab-ticket">
+  <h2>🎫 景区门票（三方案通用）</h2>
+  <table>
+    <thead><tr><th>景区</th><th>大门票</th><th>必买附加</th><th>合计</th><th>预约</th></tr></thead>
+    <tbody>
+      <tr style="background:#fff9e6 !important;"><td><strong>黄果树瀑布</strong></td><td>160</td><td>观光车 50</td><td><strong>210/人</strong></td><td>公众号「黄果树旅游」<br>提前 1-7 天</td></tr>
+      <tr style="background:#fff9e6 !important;"><td><strong>小七孔</strong></td><td>110</td><td>观光车 40</td><td><strong>150/人</strong></td><td>公众号「荔波小七孔景区」<br>提前 3-5 天</td></tr>
+      <tr><td>黔灵山公园</td><td>5</td><td>—</td><td><strong>5/人</strong></td><td>无需预约</td></tr>
+      <tr><td>甲秀楼/翠微园</td><td>免费</td><td>—</td><td><strong>0</strong></td><td>—</td></tr>
+      <tr><td>文昌阁/花果园</td><td>免费</td><td>—</td><td><strong>0</strong></td><td>—</td></tr>
     </tbody>
   </table>
   <div class="info-box">
     <h4>💡 门票小贴士</h4>
     <ul>
-      <li><strong>身份证是通行证</strong>：所有景区都刷身份证进，电子票不用打印</li>
-      <li><strong>优先用官方公众号预约</strong>：黄果树、小七孔官方公众号有时段控流，提前 1 周左右选好入园时段</li>
-      <li><strong>小七孔门票最紧张</strong>：旺季周末常当日约满，务必 5.28 前搞定</li>
-      <li><strong>观光车票分开买</strong>：在景区门口窗口或扫码现买都行，门票预约时一起买最方便</li>
-      <li><strong>特殊人群优惠</strong>：60 岁以上免票（需身份证）；学生半价（需学生证）</li>
+      <li>身份证刷闸入园，电子票不用打印</li>
+      <li>小七孔旺季周末易约满，5.28 前务必搞定</li>
+      <li>景区内观光车必买，自己走不下来</li>
+      <li>60 岁以上免票（带身份证）；学生半价（带学生证）</li>
     </ul>
   </div>
 </div>
 
-<!-- ====== TAB 5: 高铁班次 ====== -->
-<div class="tab-content" id="tab-train">
-  <h2>⑤ 高铁班次参考（以 12306 实时为准）</h2>
-
-  <h3>🚄 5.30 周六：贵阳北 ↔ 安顺西（22–33 分钟）</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>方向</th>
-        <th>参考车次</th>
-        <th>出发</th>
-        <th>到达</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td rowspan="4">去程<br>（<span class="star">首推 G2871</span>）</td><td>G8707</td><td>08:38</td><td>09:07</td></tr>
-      <tr><td>C6031</td><td>09:20</td><td>09:52</td></tr>
-      <tr><td class="star">G2871（首推，睡饱再走）</td><td>09:51</td><td>10:20</td></tr>
-      <tr><td>G5383</td><td>10:15</td><td>10:45</td></tr>
-      <tr><td rowspan="4">回程<br>（<span class="star">首推 G5396 末班</span>）</td><td>G2842</td><td>20:23</td><td>20:55</td></tr>
-      <tr><td>C6034</td><td>21:18</td><td>21:51</td></tr>
-      <tr><td class="star">G5396（末班首推）</td><td>21:39</td><td>22:10</td></tr>
-      <tr><td style="color:#999;">（无更晚班次）</td><td>—</td><td>—</td></tr>
-    </tbody>
-  </table>
-
-  <h3>🚄 5.31 周日：贵阳北 ↔ 荔波（1h14–1h28 分）</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>方向</th>
-        <th>参考车次</th>
-        <th>出发</th>
-        <th>到达</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td rowspan="4">去程<br>（<span class="star">首推 D7511</span>）</td><td>G2957</td><td>08:15</td><td>09:38</td></tr>
-      <tr><td>G3569</td><td>08:28</td><td>09:34</td></tr>
-      <tr><td class="star">D7511（首推，睡饱再走）</td><td>09:00</td><td>10:24</td></tr>
-      <tr><td>C9179</td><td>09:55</td><td>11:21</td></tr>
-      <tr><td rowspan="4">回程<br>（<span class="star">首推 G8524 末班</span>）</td><td>D8558</td><td>19:00</td><td>20:28</td></tr>
-      <tr><td>G8522</td><td>20:12</td><td>21:38</td></tr>
-      <tr><td class="star">G8524（末班首推）</td><td>21:02</td><td>22:16</td></tr>
-      <tr><td>C5832（更晚）</td><td>21:14</td><td>22:42</td></tr>
-    </tbody>
-  </table>
-
-  <div class="tips-box">
-    <h4>⚠️ 抢票策略</h4>
-    <ul>
-      <li>以上车次基于常规时刻表估算，<strong>实际以 12306 实时查询为准</strong></li>
-      <li>5.15 / 5.16 开售日优先抢：<strong>5.30 去 G2871 09:51 / 回 G5396 21:39（末班）</strong>、<strong>5.31 去 D7511 09:00 / 回 G8524 21:02（末班）</strong>；抢不到用备选班次</li>
-      <li>去程选 9 点后的：半夜才到贵阳，睡饱再走；回程买末班：景区累了慢慢吃饭再上车</li>
-      <li>贵南高铁（贵阳↔荔波）每天班次较少（约 10 班），开售即秒杀，务必准时抢</li>
-      <li>安顺西班次多（每天 30+），不紧张</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ====== TAB 6: 住宿 ====== -->
+<!-- ========== TAB · 住宿 ========== -->
 <div class="tab-content" id="tab-hotel">
-  <h2>⑥ 住宿清单</h2>
-  <h3>🏨 贵阳北站附近（5.29–5.31，连住 3 晚）</h3>
+  <h2>🏨 住宿清单（按方案）</h2>
+
+  <h3>方案 1 · 高铁版住宿</h3>
   <table>
-    <thead>
-      <tr>
-        <th>酒店</th>
-        <th>距贵阳北</th>
-        <th>推荐理由</th>
-      </tr>
-    </thead>
+    <thead><tr><th>位置</th><th>晚数</th><th>推荐酒店</th></tr></thead>
     <tbody>
-      <tr>
-        <td><strong>亚朵酒店（贵阳北站店）</strong></td>
-        <td>步行 5 分钟</td>
-        <td>连锁品控，房间大，枕头舒服，早餐 OK</td>
-      </tr>
-      <tr>
-        <td><strong>全季酒店（贵阳北站店）</strong></td>
-        <td>步行 8 分钟</td>
-        <td>性价比首选，华住会积分可用</td>
-      </tr>
-      <tr>
-        <td><strong>桔子水晶（贵阳北店）</strong></td>
-        <td>步行 10 分钟</td>
-        <td>设计感强，适合拍照</td>
-      </tr>
-      <tr>
-        <td>汉庭/锦江之星</td>
-        <td>步行 5 分钟内</td>
-        <td>预算紧推荐</td>
-      </tr>
+      <tr><td>贵阳北站附近</td><td>3 晚（5.29-5.31）</td><td>亚朵 / 全季 / 桔子水晶 贵阳北店</td></tr>
+      <tr><td>贵阳市区甲秀楼</td><td>2 晚（6.1-6.2）</td><td>亚朵贵阳甲秀楼店（首推）/ 桔子精选大十字</td></tr>
     </tbody>
   </table>
 
-  <h3>🏨 贵阳市区甲秀楼/中华路（6.1–6.2，连住 2 晚）</h3>
+  <h3>方案 2 · 自驾 A 住宿</h3>
   <table>
-    <thead>
-      <tr>
-        <th>酒店</th>
-        <th>位置</th>
-        <th>推荐理由</th>
-      </tr>
-    </thead>
+    <thead><tr><th>位置</th><th>晚数</th><th>推荐酒店</th></tr></thead>
     <tbody>
-      <tr>
-        <td><strong class="star">亚朵贵阳甲秀楼店</strong></td>
-        <td>甲秀楼步行 5 分钟</td>
-        <td><span class="badge red">首推</span> 市中心 + 吃最近 + 景最近</td>
-      </tr>
-      <tr>
-        <td>亚朵 S 贵阳筑金店</td>
-        <td>中华路</td>
-        <td>高阶亚朵，装修好</td>
-      </tr>
-      <tr>
-        <td>桔子精选（大十字店）</td>
-        <td>喷水池/大十字</td>
-        <td>老城核心，小吃步行可达</td>
-      </tr>
-      <tr>
-        <td>全季酒店（花果园万象汇店）</td>
-        <td>花果园 CBD</td>
-        <td>性价比好，但吃偏新区</td>
-      </tr>
+      <tr><td>都匀</td><td>1 晚（5.29）</td><td>都匀东站附近 全季 / 亚朵 / 锦江都城</td></tr>
+      <tr><td>黄果树周边</td><td>1 晚（5.30）</td><td>黄果树假日酒店 / 镇宁麗枫</td></tr>
+      <tr><td>贵阳市区</td><td>2 晚（5.31-6.1）</td><td>亚朵贵阳甲秀楼店</td></tr>
     </tbody>
   </table>
+
+  <h3>方案 3 · 自驾 B 住宿</h3>
+  <table>
+    <thead><tr><th>位置</th><th>晚数</th><th>推荐酒店</th></tr></thead>
+    <tbody>
+      <tr><td>黄果树周边</td><td>2 晚（5.29-5.30）</td><td>黄果树假日酒店 / 镇宁麗枫</td></tr>
+      <tr><td>荔波县城</td><td>1 晚（5.31）</td><td>荔波亚朵 / 县城连锁酒店</td></tr>
+      <tr><td>贵阳市区</td><td>1 晚（6.1）</td><td>亚朵贵阳甲秀楼店</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <h4>💡 通用建议</h4>
+    <ul>
+      <li>贵阳市区首推甲秀楼附近，吃和景都最方便</li>
+      <li>黄果树住宿：景区里酒店贵且选择少，住<strong>黄果树镇</strong>或<strong>镇宁县城</strong>更划算（开车 10-20 分钟到景区）</li>
+      <li>都匀/荔波县城选高铁站或市中心连锁，安全停车</li>
+      <li>提前 2-3 周订旺季稍便宜</li>
+    </ul>
+  </div>
 </div>
 
-<!-- ====== TAB 7: 吃喝 ====== -->
+<!-- ========== TAB · 吃喝 ========== -->
 <div class="tab-content" id="tab-food">
-  <h2>⑦ 吃喝大全</h2>
+  <h2>🍜 吃喝大全（三方案通用）</h2>
 
-  <h3>🍜 贵阳早餐地图</h3>
+  <h3>🍜 贵阳早餐</h3>
   <div class="food-grid">
     <div class="food-card">
-      <h4>程肠旺（肠旺面老字号）</h4>
+      <h4>程肠旺（肠旺面）</h4>
       <ul>
         <li><span class="must">招牌肠旺面</span></li>
         <li>豆花面、素粉</li>
-        <li>分店多，二七路店最近</li>
-        <li>营业：06:00–14:00</li>
+        <li>二七路店最近</li>
       </ul>
     </div>
     <div class="food-card">
@@ -1092,16 +1076,14 @@
         <li><span class="must">原汤牛肉粉</span></li>
         <li>酸汤牛肉粉</li>
         <li>大十字/花果园多家</li>
-        <li>营业：07:00–15:00</li>
       </ul>
     </div>
     <div class="food-card">
       <h4>素王（素粉老店）</h4>
       <ul>
-        <li><span class="must">素粉</span>（招牌！）</li>
+        <li><span class="must">素粉</span></li>
         <li>加油渣小菜</li>
         <li>喷水池总店</li>
-        <li>贵阳人早餐最爱</li>
       </ul>
     </div>
     <div class="food-card">
@@ -1110,130 +1092,125 @@
         <li><span class="must">豆腐圆子</span></li>
         <li>油炸脆皮 + 蘸酱</li>
         <li>二七路/青云路都有</li>
-        <li>下午茶首选</li>
       </ul>
     </div>
   </div>
 
-  <h3>🍲 贵阳正餐必吃</h3>
+  <h3>🍲 贵阳正餐</h3>
   <table>
-    <thead>
-      <tr>
-        <th>品类</th>
-        <th>店名</th>
-        <th>必点</th>
-      </tr>
-    </thead>
+    <thead><tr><th>品类</th><th>店</th><th>必点</th></tr></thead>
     <tbody>
-      <tr>
-        <td>酸汤鱼</td>
-        <td><strong>老凯俚酸汤鱼（甲秀楼总店）</strong></td>
-        <td>红酸汤江团 + 木姜子辣椒蘸水 + 折耳根</td>
-      </tr>
-      <tr>
-        <td>酸汤鱼</td>
-        <td>亮欢寨（贵阳总店）</td>
-        <td>贵阳老字号，木姜子油是灵魂</td>
-      </tr>
-      <tr>
-        <td>豆米火锅</td>
-        <td>丝恋豆米火锅</td>
-        <td>花豆米 + 脆哨 + 腊肉</td>
-      </tr>
-      <tr>
-        <td>辣子鸡</td>
-        <td>厢厢桂花里</td>
-        <td>贵阳辣子鸡 + 糍粑</td>
-      </tr>
-      <tr>
-        <td>丝娃娃</td>
-        <td><strong>丝恋糖醋丝娃娃</strong></td>
-        <td>十几种素菜 + 糖醋蘸水</td>
-      </tr>
-      <tr>
-        <td>黔菜</td>
-        <td>群升四季贵州</td>
-        <td>贵州菜博物馆，适合首次体验</td>
-      </tr>
+      <tr><td>酸汤鱼</td><td><strong>老凯俚酸汤鱼（甲秀楼总店）</strong></td><td>红酸汤江团 + 木姜子蘸水</td></tr>
+      <tr><td>酸汤鱼</td><td>亮欢寨</td><td>木姜子油是灵魂</td></tr>
+      <tr><td>豆米火锅</td><td>丝恋豆米火锅</td><td>花豆米 + 脆哨 + 腊肉</td></tr>
+      <tr><td>辣子鸡</td><td>厢厢桂花里</td><td>贵阳辣子鸡 + 糍粑</td></tr>
+      <tr><td>丝娃娃</td><td><strong>丝恋糖醋丝娃娃</strong></td><td>十几种素菜 + 糖醋蘸水</td></tr>
     </tbody>
   </table>
 
-  <h3>🌃 二七路小吃街（必走一遍）</h3>
+  <h3>🌃 二七路小吃街</h3>
   <div class="info-box">
-    <h4>🗺 二七路摊位走法（从北往南）</h4>
+    <h4>🗺 必吃顺序（从北往南）</h4>
     <ul>
-      <li><strong>① 入口：恋爱豆腐果</strong>（现烤现吃）</li>
-      <li><strong>② 烤豆腐摊</strong>（几家都差不多，辣椒面是灵魂）</li>
-      <li><strong>③ 丝娃娃铺子</strong>（选看起来干净多人的）</li>
-      <li><strong>④ 雷家豆腐圆子</strong>（炸豆腐圆子，配酸萝卜）</li>
-      <li><strong>⑤ 糯米饭摊</strong>（贵阳最爱的早/晚餐，加油辣椒和花生碎）</li>
-      <li><strong>⑥ 烤鱼档</strong>（几家烤鱼摊主打味道各异，选人多的）</li>
-      <li><strong>⑦ 糕粑稀饭</strong>（谭家糕粑稀饭分店，藕粉+糯米糕）</li>
-      <li><strong>⑧ 甜品：冰粉 / 冰浆</strong>（木姜子冰粉是贵州特色）</li>
+      <li>① 恋爱豆腐果（现烤）</li>
+      <li>② 烤豆腐摊（辣椒面是灵魂）</li>
+      <li>③ 丝娃娃铺子</li>
+      <li>④ 雷家豆腐圆子</li>
+      <li>⑤ 糯米饭摊</li>
+      <li>⑥ 烤鱼档</li>
+      <li>⑦ 糕粑稀饭</li>
+      <li>⑧ 木姜子冰粉</li>
     </ul>
-    <p style="margin-top:8px; color:#666;">💡 2 人吃 4–5 样就饱，别单样买太多</p>
   </div>
 
-  <h3>🌃 青云路夜市（更野生，网红级）</h3>
+  <h3>🌃 青云路夜市</h3>
   <div class="info-box">
-    <h4>🗺 青云路必吃 Top 8</h4>
+    <h4>🗺 必吃 Top 8</h4>
     <ul>
-      <li><strong>① 烤脑花</strong>（招牌，接受程度见仁见智）</li>
-      <li><strong>② 烤鱼</strong>（贵阳烤鱼和重庆/武汉不同，现点现烤）</li>
-      <li><strong>③ 素娃娃的丝娃娃</strong>（人气最旺的一家）</li>
-      <li><strong>④ 糯米饭</strong>（比二七路的更正宗）</li>
-      <li><strong>⑤ 烙锅</strong>（贵州特色，油煎小锅）</li>
-      <li><strong>⑥ 酸汤粉</strong>（消夜爆款）</li>
-      <li><strong>⑦ 丝恋糖醋丝娃娃</strong>（青云路分店）</li>
-      <li><strong>⑧ 冰浆 / 木姜子冰粉</strong>（收尾解辣）</li>
+      <li>① 烤脑花 / ② 烤鱼 / ③ 素娃娃的丝娃娃 / ④ 糯米饭</li>
+      <li>⑤ 烙锅 / ⑥ 酸汤粉 / ⑦ 丝恋糖醋丝娃娃 / ⑧ 冰浆</li>
     </ul>
-    <p style="margin-top:8px; color:#666;">💡 青云路 19:00 后最热闹，23:00 打烊，放心吃</p>
+    <p style="margin-top:8px; color:#666;">💡 19:00 后最热闹，23:00 打烊</p>
   </div>
 
+  <h3>🍽 景区周边吃</h3>
+  <div class="food-grid">
+    <div class="food-card">
+      <h4>黄果树景区门口</h4>
+      <ul>
+        <li><span class="must">黄记油炸鸡</span></li>
+        <li>安顺裹卷（米皮包豆芽）</li>
+        <li>夺夺粉（酸辣开胃）</li>
+        <li>破酥包</li>
+      </ul>
+    </div>
+    <div class="food-card">
+      <h4>小七孔/荔波</h4>
+      <ul>
+        <li><span class="must">荔波酸汤鱼</span></li>
+        <li>炸毛辣果（特色）</li>
+        <li>樟江鱼</li>
+        <li>布依族家访餐</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<!-- ====== TAB 8: 行前 & 避坑 ====== -->
+<!-- ========== TAB · 行前&避坑 ========== -->
 <div class="tab-content" id="tab-checklist">
-  <h2>⑧ 行前清单 & 避坑提示</h2>
+  <h2>📝 行前清单 & 避坑</h2>
 
   <div class="checklist">
     <h3 style="margin-top:0;">🎒 必带物品</h3>
     <ul>
-      <li>身份证原件（租酒店、坐高铁、进景区）</li>
+      <li>身份证原件（租酒店、坐高铁、进景区、租车都要）</li>
+      <li>驾照原件（自驾必带）</li>
       <li>少量现金（景区小摊位可能不收电子支付）</li>
-      <li>防晒霜 SPF50+、墨镜、帽子（贵州紫外线比想象强）</li>
+      <li>防晒霜 SPF50+、墨镜、帽子</li>
       <li>雨衣/便携雨伞（6 月多阵雨）</li>
-      <li>薄长袖外套（早晚温差大，空调车冷）</li>
-      <li>舒适运动鞋 × 2（水上森林可能湿鞋）</li>
-      <li>充电宝（景区步行多）</li>
-      <li>高德地图离线包（贵州山区信号差）</li>
-      <li>常用药：肠胃药、感冒药、创可贴（贵州菜辣可能肠胃不适）</li>
-      <li>水壶/保温杯（景区买水贵）</li>
+      <li>薄长袖外套（早晚温差大）</li>
+      <li>防滑运动鞋 × 2（水上森林可能湿鞋）</li>
+      <li>充电宝 + 车充（自驾必备）</li>
+      <li>常用药：肠胃药、感冒药、创可贴、晕车药</li>
+      <li>保温杯（景区买水贵）</li>
     </ul>
     <h3>📱 App / 公众号</h3>
     <ul>
-      <li>12306（高铁票）</li>
-      <li>携程 + 飞猪 + 航司 App（机票酒店）</li>
+      <li>12306（高铁版必装）</li>
+      <li>携程 + 飞猪 + 航司 App</li>
       <li>美团 / 大众点评（餐厅+门票）</li>
-      <li>滴滴出行 / T3 出行（打车）</li>
-      <li>微信公众号：黄果树旅游、荔波小七孔景区、荔波文旅</li>
-      <li>高德地图（导航必备）</li>
+      <li>滴滴出行 / T3 出行</li>
+      <li>神州租车 / 一嗨（自驾必装）</li>
+      <li>微信公众号：黄果树旅游、荔波小七孔景区</li>
+      <li>高德地图（导航必备，下载贵州离线包）</li>
     </ul>
   </div>
 
   <div class="tips-box">
-    <h4>🚨 新手必看的 10 件事</h4>
+    <h4>🚨 通用避坑</h4>
     <ul>
-      <li><strong>1. 贵州菜 = 辣 + 酸</strong>：怕辣的提前说"微辣"，折耳根不是所有人喜欢</li>
-      <li><strong>2. 黄果树三景区距离远</strong>：观光车一定买，自己走走不完</li>
-      <li><strong>3. 小七孔必须西门进</strong>：反向游顺坡而下，正向走累死</li>
-      <li><strong>4. 5.31 是最累的一天</strong>：早起 + 两段高铁 + 全天景区，前一天别熬夜</li>
-      <li><strong>5. 黔灵山猴子会抢食物</strong>：不要拿零食出来，小心手机被抢</li>
-      <li><strong>6. Day 4 量力而行</strong>：前两天景区强度大，6.2 可以完全放空休息，不一定要按计划执行</li>
-      <li><strong>7. 出租车拒载/绕路</strong>：用滴滴/T3 出行更安全</li>
-      <li><strong>8. 景区门口拉客别理</strong>：尤其荔波站出来，正规直通车走公众号</li>
-      <li><strong>9. 6 月是贵州雨季</strong>：每天带雨衣/伞，景区湿滑小心</li>
-      <li><strong>10. 酸汤鱼配木姜子油</strong>：木姜子是灵魂，第一次吃可以少加</li>
+      <li><strong>1. 贵州菜 = 辣 + 酸</strong>：怕辣的提前说"微辣"</li>
+      <li><strong>2. 黄果树三景区距离远</strong>：观光车一定买</li>
+      <li><strong>3. 小七孔必须西门进</strong>：反向游顺坡而下</li>
+      <li><strong>4. 黔灵山猴子会抢食</strong>：不要拿零食出来，小心手机</li>
+      <li><strong>5. 出租车拒载/绕路</strong>：用滴滴/T3 出行</li>
+      <li><strong>6. 景区门口拉客别理</strong>：尤其荔波站，正规走公众号</li>
+      <li><strong>7. 6 月是雨季</strong>：每天带雨衣/伞</li>
+      <li><strong>8. 酸汤鱼配木姜子油</strong>：木姜子是灵魂，第一次少加</li>
+    </ul>
+  </div>
+
+  <div class="tips-box">
+    <h4>🚗 自驾专属避坑</h4>
+    <ul>
+      <li><strong>1. 必买全险 + 不计免赔</strong>：贵州山区碎石多，剐蹭概率高，不要省这几百</li>
+      <li><strong>2. 异地还车确认</strong>：取车机场，还车市区，订车时务必选支持异地还车的，避免临时被收 200-500</li>
+      <li><strong>3. 山路开慢点</strong>：贵州雨后路滑，急弯多，限速 60-80</li>
+      <li><strong>4. 服务区休息一定要</strong>：开车 2 小时必停 15 分钟</li>
+      <li><strong>5. 加油趁早</strong>：山区加油站少，油表 1/3 就找站</li>
+      <li><strong>6. ETC 节省排队</strong>：直接用 ETC 卡或扫码 ETC</li>
+      <li><strong>7. 景区停车</strong>：选官方停车场，路边野停可能被贴罚单</li>
+      <li><strong>8. 还车提前洗车</strong>：还车前洗一下，避免被收"清洁费"</li>
     </ul>
   </div>
 
@@ -1244,33 +1221,27 @@
       <li>贵阳北站：0851-12306</li>
       <li>黄果树景区：0853-3592136</li>
       <li>荔波小七孔：0854-3610200</li>
-      <li>报警：110 / 急救：120 / 火警：119</li>
+      <li>报警 110 / 急救 120 / 火警 119 / 高速救援 122</li>
       <li>旅游投诉：12301</li>
     </ul>
   </div>
 </div>
 
 <footer>
-  生成时间：2026 年 5 月 7 日 · 仅供参考，具体以当日实际为准<br>
-  · 打印时会自动平铺所有 tab（A4 纵向）· 手机查看建议横屏 ·
+  最后更新：2026 年 5 月 · 三套方案对比版 · 仅供参考<br>
+  · 打印时自动平铺所有 tab（A4 纵向）·
 </footer>
 
 </div>
 
 <script>
-// Tab 切换
 (function(){
   const btns = document.querySelectorAll('.tab-btn');
   const contents = document.querySelectorAll('.tab-content');
 
   function activate(tabId){
-    btns.forEach(b => {
-      b.classList.toggle('active', b.dataset.tab === tabId);
-    });
-    contents.forEach(c => {
-      c.classList.toggle('active', c.id === 'tab-' + tabId);
-    });
-    // 把 tab 按钮滚到可视区
+    btns.forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
+    contents.forEach(c => c.classList.toggle('active', c.id === 'tab-' + tabId));
     const activeBtn = document.querySelector('.tab-btn.active');
     if (activeBtn) activeBtn.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
   }
@@ -1278,32 +1249,21 @@
   btns.forEach(b => {
     b.addEventListener('click', () => {
       activate(b.dataset.tab);
-      // 更新 URL hash 方便分享和刷新保持位置
       history.replaceState(null, '', '#' + b.dataset.tab);
       window.scrollTo({top:0, behavior:'smooth'});
     });
   });
 
-  // 页面加载时看 URL hash
   const hash = window.location.hash.replace('#', '');
-  const validTabs = ['prep','overview','itinerary','ticket','train','hotel','food','checklist'];
+  const validTabs = ['prep','compare','hsr','drvA','drvB','ticket','hotel','food','checklist'];
   if (validTabs.includes(hash)) {
     activate(hash);
-  } else if (hash && hash.startsWith('day')) {
-    // 如果是 #day1 这种锚点，切到"每日行程" tab 并滚动到锚点
-    activate('itinerary');
-    setTimeout(() => {
-      const el = document.getElementById(hash);
-      if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
-    }, 200);
   }
 
-  // sub-nav 里的 #dayX 链接：拦截后切 tab + 滚动
   document.querySelectorAll('.sub-nav a').forEach(a => {
     a.addEventListener('click', (e) => {
       const href = a.getAttribute('href');
-      if (href && href.startsWith('#day')) {
-        // 已经在 itinerary tab 里，只滚动
+      if (href && href.startsWith('#')) {
         const el = document.querySelector(href);
         if (el) {
           e.preventDefault();
